@@ -1,0 +1,53 @@
+//Используемые шрифты и их насыщенность
+@mixin font_primary($weight) {
+  font-family: $font-primary;
+  font-weight: $weight;
+}
+
+@mixin font_secondary($weight) {
+  font-family: $font-secondary;
+  font-weight: $weight;
+}
+
+@mixin palette_buttons {
+  color: $font-color-inverted;
+  background-color: $bg-color-secondary;
+}
+
+//Конец шрифтов
+
+@mixin images_adaptiv {
+display: none;
+  &--mobile {
+    display: block;
+  }
+
+  @media (min-width: $min-tablet) {
+    &--mobile {
+      display: none;
+    }
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: $min-desktop) {
+    &--mobile {
+      display: none;
+    }
+    &--tablet {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+    }
+  }
+}
+
+//Для тестирования
+@mixin only_for_test($test-color: #a21c32) {
+  outline: 2px solid $test-color;
+  outline-offset: -2px;
+}
+
+//Для тестирования
