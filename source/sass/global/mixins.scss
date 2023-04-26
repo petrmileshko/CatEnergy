@@ -16,33 +16,6 @@
 
 //Конец шрифтов
 
-@mixin images_adaptiv {
-display: none;
-  &--mobile {
-    display: block;
-  }
-
-  @media (min-width: $min-tablet) {
-    &--mobile {
-      display: none;
-    }
-    &--tablet {
-      display: block;
-    }
-  }
-
-  @media (min-width: $min-desktop) {
-    &--mobile {
-      display: none;
-    }
-    &--tablet {
-      display: none;
-    }
-    &--desktop {
-      display: block;
-    }
-  }
-}
 
 //Для тестирования
 @mixin only_for_test($test-color: #a21c32) {
