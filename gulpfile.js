@@ -230,10 +230,6 @@ export const build = gulp.series(
     optimizeImages,
     createWebp
     // makeSpite,
-  ),
-  gulp.series(
-    server,
-    watcher
   )
 );
 
