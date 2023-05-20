@@ -1,7 +1,7 @@
 {
-  "name": "pink",
+  "name": "CatEnergy",
   "private": true,
-  "description": "Учебный проект \"Pink\"",
+  "description": "Учебный проект \"CatEnergy\"",
   "devDependencies": {
     "@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v9.0.1",
     "@htmlacademy/editorconfig-cli": "1.0.0",
