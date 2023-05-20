@@ -1,5 +1,16 @@
 //Блок страница - для корневого <html>
 .page {
-  height: 100%;
+  &--column {
+    height: 100%;
+  }
 }
 
+//Элемент страницы body
+.page__body {
+
+  &--column {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+}
