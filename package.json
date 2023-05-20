@@ -1,7 +1,7 @@
 {
   "name": "CatEnergy",
   "private": true,
-  "description": "Учебный проект \"CatEnergy\"",
+  "description": "Учебный проект",
   "devDependencies": {
     "@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v9.0.1",
     "@htmlacademy/editorconfig-cli": "1.0.0",
@@ -35,7 +35,7 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "lint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
-    "test": "npm run editorconfig && npm run stylelint",
+    "test": "npm run editorconfig && stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
     "start": "gulp",
     "dev": "gulp dev",
     "build": "gulp build"
