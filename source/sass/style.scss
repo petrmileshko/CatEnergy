@@ -5,12 +5,12 @@
 @import "global/fonts.scss";
 @import "global/normalize.scss";
 
+//Отладочные стили разметки/ потом закомментировать
+@import "global/outlines.scss";
 
 // Компоненты БЭМ
-
 // базовые глобальные
 @import "blocks/visually-hidden.scss";
-
 
 /* Стили для Главная страница */
 

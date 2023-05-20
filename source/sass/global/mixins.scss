@@ -10,8 +10,8 @@
 }
 
 @mixin palette_buttons {
-  color: $font-color-inverted;
-  background-color: $bg-color-secondary;
+  color: $button-color;
+  background-color: $button-bg-color;
 }
 
 //Конец шрифтов
