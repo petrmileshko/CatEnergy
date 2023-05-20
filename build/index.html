@@ -7,22 +7,147 @@
   <meta name="author" content="Mileshko Peter">
   <meta name="copyright" content="https://htmlacademy.ru/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
   <title>Магазин корма для котов</title>
 </head>
 
 <body class="page__body page__body--column">
 
-  <header class="page__header">
+  <header class="page__header page-header" id="top">
+
+    <a class="page-header_logo logo" href="/">
+      <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Корм для котов">
+      <img src="img/logo-sign-mobile.svg" width="101" height="18" alt="" aria-hidden="true">
+    </a>
+
+    <nav class="page-header__nav navigation">
+
+      <button class="navigation__toggler" type="button">
+        <span class="visually-hidden">Открыть</span>
+      </button>
+
+      <ul class="navigation__menu menu">
+        <li class="menu__item">
+          <a class="menu__link menu__link--current" href="/">главная</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">каталог продукции</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">подбор программы</a>
+        </li>
+      </ul>
+
+    </nav>
 
   </header>
 
-  <main class="page__content page__content--column">
+  <main class="page__content page__content--column main-page">
 
+    <header class="main-page__header hero">
+      <h1 class="main-page__title">Функциональное питание для котов</h1>
+      <p class="hero__slogan">Занялся собой? Займись котом!</p>
+      <img class="hero__image" src="img/index/mobile/can-pro.png" width="280" height="270"
+        alt="Корм с курицей PRO 500 грамм.">
+      <a class="hero__action button" href="feeding-form.html">подобрать программу</a>
+    </header>
+
+    <section class="main-page__section categories">
+      <h2 class="main-page__section-title visually-hidden">Категории кормов</h2>
+
+      <article class="categories__item category">
+        <h3 class="category__title">похудение</h3>
+        <p class="category__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
+          диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+        <a class="category__link" href="">каталог slim</a>
+      </article>
+
+      <article class="categories__item category">
+        <h3 class="category__title">похудение</h3>
+        <p class="category__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
+          диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+        <a class="category__link" href="">каталог slim</a>
+      </article>
+
+    </section>
+
+    <section class="main-page__section process">
+      <h2 class="main-page__section-title">Как это работает</h2>
+
+      <ol class="process__list">
+        <li class="process__item process__item--useful">
+          <p class="process__text">Функциональное питание содержит только полезные питательные вещества.</p>
+        </li>
+        <li class="process__item process__item--powder">
+          <p class="process__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+        </li>
+        <li class="process__item process__item--meal">
+          <p class="process__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
+        </li>
+        <li class="process__item process__item--results">
+          <p class="process__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="main-page__section example">
+      <h2 class="main-page__section-title">Живой пример</h2>
+
+      <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
+        в день. </p>
+
+      <dl class="example__progress">
+        <dt class="example__parameter">снижение веса</dt>
+        <dd class="example__value">5 КГ</dd>
+
+        <dt class="example__parameter">затрачено времени</dt>
+        <dd class="example__value">60 ДНЕЙ</dd>
+      </dl>
+      <p class="example__costs">Затраты на питание: 15 000 РУБ. </p>
+
+      <div class="example__compare images">
+        <img class="images__item" src="img/index/mobile/cat-before.jpg" width="280" height="232"
+          alt="Толстый и ленивый кот на обычном питании.">
+        <img class="images__item" src="img/index/mobile/cat-after.jpg" width="243" height="232"
+          alt="Стройный и активный кот на нашем функциональном питании  ">
+      </div>
+
+      <div class="example__compare-control togglers">
+        <button class="togglers__button">было</button>
+        <button class="togglers__button">стало</button>
+      </div>
+    </section>
   </main>
 
-  <footer class="page__footer">
+  <footer class="page__footer contacts">
+    <h2 class="visually-hidden">Контакты</h2>
+    <p class="contacts__heading">приглашаем к сотрудничеству дилеров!</p>
+    <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    <img class="contacts__map" src="img/index/mobile/map.jpg" width="320" height="362"
+      alt="Карта с расположением главного офиса">
+    <img class="contacts__location" src="img/index/mobile/map-pin.png" width="56" height="52"
+      alt="Отметка на карте расположения офиса">
+  </footer>
 
+  <footer class="page__footer page-footer">
+
+    <a class="page-footer__logo logo" href="#top">
+      <img src="img/footer-logo.svg" width="128" height="24" alt="логотип">
+    </a>
+
+    <p class="page-footer__menu socials">
+      <a class="socials__link socials__link--vk" href=""><span class="visually-hidden">Вконтаке</span></a>
+      <a class="socials__link socials__link--vk" href=""><span class="visually-hidden">Instagram</span></a>
+      <a class="socials__link" href=""><span class="visually-hidden">Facebook</span></a>
+    </p>
+
+    <a class="page-footer__link designers">
+      <span class="designers__name">HTML Academy</span>
+      <img class="designers__image" src="img/logo-academy.svg" width="27" height="34"
+        alt="Логотип HTMLAcademy дизайнеры сайта">
+      <span class="visually-hidden">Дизайнеры сайта</span>
+    </a>
   </footer>
 
 </body>
