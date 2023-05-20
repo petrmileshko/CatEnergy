@@ -8,6 +8,8 @@
 
 //Элемент страницы body
 .page__body {
+  margin: 0;
+
   &--column {
     // Модификатор для одноколоночной страницы flex
     display: flex;
@@ -18,7 +20,8 @@
 
 //Стили для "шапки" сайта / повторяется на всех страницах
 .page__header {
-  height: 200px;
+  height: auto;
+  background-color: var(--font-color-darken);
 }
 
 //Стили для основного содержимого страницы, не повторяется на других страницах
@@ -31,5 +34,6 @@
 
 //Стили для "подвала" сайта / повторяется на всех страницах
 .page__footer {
-  height: 200px;
+  height: auto;
+  background-color: var(--font-color-darken);
 }
