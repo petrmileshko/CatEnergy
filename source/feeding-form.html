@@ -13,17 +13,69 @@
 
 <body class="page__body page__body--column">
 
-  <header class="page__header">
+  <header class="page__header page-header">
+
+    <a class="page-header__logo logo" href="index.html">
+      <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Корм для котов">
+      <img src="img/logo-sign-mobile.svg" width="101" height="18" alt="" aria-hidden="true">
+    </a>
+
+    <nav class="page-header__nav navigation">
+
+      <button class="navigation__toggler" type="button">
+        <span class="visually-hidden">Открыть</span>
+      </button>
+
+      <ul class="navigation__menu menu">
+        <li class="menu__item">
+          <a class="menu__link" href="index.html">главная</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="catalog.html">каталог продукции</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link menu__link--current" href="feeding-form.html">подбор программы</a>
+        </li>
+      </ul>
+
+    </nav>
 
   </header>
 
-  <main class="page__content page__content--column">
+  <main class="page__content page__content--column feeding-form">
 
   </main>
 
-  <footer class="page__footer">
-
+  <footer class="page__footer contacts">
+    <h2 class="visually-hidden">Контакты</h2>
+    <p class="contacts__heading">приглашаем к сотрудничеству дилеров!</p>
+    <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    <img class="contacts__map" src="img/index/mobile/map.jpg" width="320" height="362"
+      alt="Карта с расположением главного офиса">
+    <img class="contacts__location" src="img/index/mobile/map-pin.png" width="56" height="52"
+      alt="Отметка на карте расположения офиса">
   </footer>
+
+  <footer class="page__footer page-footer">
+
+    <a class="page-footer__logo logo" href="index.html">
+      <img src="img/footer-logo.svg" width="128" height="24" alt="логотип">
+    </a>
+
+    <p class="page-footer__menu socials">
+      <a class="socials__link socials__link--vk" href=""><span class="visually-hidden">Вконтаке</span></a>
+      <a class="socials__link socials__link--vk" href=""><span class="visually-hidden">Instagram</span></a>
+      <a class="socials__link" href=""><span class="visually-hidden">Facebook</span></a>
+    </p>
+
+    <a class="page-footer__link designers">
+      <span class="designers__name">HTML Academy</span>
+      <img class="designers__image" src="img/logo-academy.svg" width="27" height="34"
+        alt="Логотип HTMLAcademy дизайнеры сайта">
+      <span class="visually-hidden">Дизайнеры сайта</span>
+    </a>
+  </footer>
+
 
 </body>
 
