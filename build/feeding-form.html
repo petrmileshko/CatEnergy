@@ -42,8 +42,96 @@
 
   </header>
 
-  <main class="page__content page__content--column feeding-form">
+  <main class="page__content page__content--column order-page">
+    <h1 class="page__title">Подбор программы</h1>
+    <p class="order-page__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
+    <form class="order-page__anketa form" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="form__group">
+        <legend class="visually-hidden">Данные кота</legend>
+
+        <p class="form__subgroup">
+          <label class="form__label">
+            <span>Имя:*</span>
+            <input class="form__input" type="text" name="cat-name" placeholder="БАРСИК" required>
+          </label>
+
+          <label class="form__label">
+            <span>Вес (кг):*</span>
+            <input class="form__input" type="text" name="cat-weight" placeholder="7" required>
+          </label>
+
+          <label class="form__label">
+            <span>Возраст (лет):</span>
+            <input class="form__input" type="text" name="cat-age" placeholder="7">
+          </label>
+        </p>
+
+        <p class="form__subgroup">
+          <label class="form__label control control--radio">
+            <input class="control__input" type="radio" name="purpose" value="slim" checked>
+            <span class="control__marker">похудение</span>
+          </label>
+
+          <label class="form__label control control--radio">
+            <input class="control__input" type="radio" name="purpose" value="fat">
+            <span class="control__marker">Набор массы</span>
+          </label>
+
+          <label class="form__label control control--radio">
+            <input class="control__input" type="radio" name="purpose" value="advice">
+            <span class="control__marker">Не знаю (Нужен ваш совет)</span>
+          </label>
+        </p>
+      </fieldset>
+
+      <fieldset class="form__group">
+        <legend class="form__group-legend title">Контактные данные (владельца кота)</legend>
+        <label class="form__label">
+          <span>E-mail:*</span>
+          <input class="form__input" type="email" name="user-mail" placeholder="kuklachev@gmail.com" required>
+        </label>
+
+        <label class="form__label">
+          <span>Телефон:*</span>
+          <input class="form__input" type="tel" name="user-phone" placeholder="8 (960) 900-60-90" required>
+        </label>
+      </fieldset>
+
+      <div class="form__group">
+        <label class="form__group-legend title" for="comments">Комментарий</label>
+        <div>
+          <textarea class="form__textarea" name="comments" id="comments" rows="5"
+            placeholder="Расскажите обо всех повАдках кота"></textarea>
+        </div>
+      </div>
+
+      <fieldset class="form__group">
+        <legend class="form__group-legend title">Дополнительно</legend>
+
+        <label class="form__label control control--checkbox">
+          <input class="control__input" type="checkbox" name="goods-additional" value="sweet" checked>
+          <span class="control__marker">сахарозаменитель</span>
+        </label>
+
+        <label class="form__label control control--checkbox">
+          <input class="control__input" type="checkbox" name="goods-additional" value="water">
+          <span class="control__marker">питьевая вода</span>
+        </label>
+
+        <label class="form__label control control--checkbox">
+          <input class="control__input" type="checkbox" name="goods-additional" value="milk">
+          <span class="control__marker">молоко</span>
+        </label>
+
+        <label class="form__label control control--checkbox">
+          <input class="control__input" type="checkbox" name="goods-additional" value="vitamins">
+          <span class="control__marker">витамины</span>
+        </label>
+      </fieldset>
+      <button class="form__submit button">отправить заявку</button>
+      <p class="form__note">* — Обязательные поля</p>
+    </form>
   </main>
 
   <footer class="page__footer contacts">
