@@ -18,4 +18,4 @@
 ![image](https://files.webpeternet.ru/cat-catalog.jpg)
 
 Страница формы
-![image](https://files.webpeternet.ru/cat-ащкь.jpg)
+![image](https://files.webpeternet.ru/cat-form.jpg)
