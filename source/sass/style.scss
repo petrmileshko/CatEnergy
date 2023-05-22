@@ -10,9 +10,16 @@
 @import "blocks/block-center.scss";
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
+@import "blocks/navigation.scss";
+@import "blocks/menu.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
 
 /* Стили для Главная страница */
 @import "blocks/main-page.scss";
+@import "blocks/hero.scss";
+@import "blocks/example.scss";
+
 /* Стили для Страница каталога */
 @import "blocks/catalog-page.scss";
 /* Стили для Страница формы заказов */

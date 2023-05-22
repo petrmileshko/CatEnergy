@@ -1,0 +1,14 @@
+//Блок навигации по сайту
+.navigation {
+  width: fit-content;
+}
+
+.navigation__toggler {
+  width: 24px;
+  height: 16px;
+}
+
+.navigation__menu {
+  display: flex;
+  flex-direction: column;
+}

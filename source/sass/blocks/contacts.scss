@@ -1,0 +1,15 @@
+//Секция контакты
+.contacts {
+  padding: 0;
+
+  @include font_size_text(14px, 20px);
+}
+
+.contacts__info {
+  @include bg_normal;
+}
+
+.contacts__heading {
+  @include font_heading;
+  @include font_size_text(16px, 20px);
+}

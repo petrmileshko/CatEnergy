@@ -1,10 +1,15 @@
 //Используемые шрифты и их насыщенность
-@mixin font_text($weight) {
+@mixin font_text($weight: 400) {
   font-family: $font-text;
   font-weight: $weight;
 }
 
-@mixin font_heading($weight) {
+@mixin font_size_text($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin font_heading($weight: 500) {
   font-family: $font-heading;
   font-weight: $weight;
 }
@@ -14,6 +19,17 @@
 @mixin buttons_normal {
   color: $button-color;
   background-color: $button-bg-color;
+}
+
+//Фоновый стиль
+@mixin bg_normal {
+  color: $font-color-basic;
+  background-color: $bg-color-primary;
+}
+
+@mixin bg_footer {
+  color: $font-color-footer;
+  background-color: $bg-color-footer;
 }
 
 //Для тестирования

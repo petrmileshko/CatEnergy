@@ -1,0 +1,17 @@
+//Блок меню
+.menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.menu__item {
+  padding: 22px 0 24px;
+}
+
+.menu__link {
+  color: inherit;
+  font: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+}
