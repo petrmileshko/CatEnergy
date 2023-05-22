@@ -1,10 +1,10 @@
 //Параметры шрифта
-$font-primary: "Arial", sans-serif;
-$font-secondary: "Oswald", sans-serif;
+$font-text: "Arial", sans-serif;
+$font-heading: "Oswald", sans-serif;
 $font-regular: 400;
 $font-medium: 500;
 $font-bold: 700;
-$font-color: #000000;
+$font-color-basic: #000000;
 $font-color-inverted: #ffffff;
 
 //Фон
@@ -15,17 +15,9 @@ $bg-color-secondary: #68b738;
 $button-color: #ffffff;
 $button-bg-color: #68b738;
 
+$button-color-catalog: #444444;
+$button-bg-color-catalog: #f2f2f2;
+
 //Экраны
 $min-tablet: 768px;
 $min-desktop: 1190px;
-
-//Переменные CSS
-:root {
-  --hero-bg-color: #62a53b;
-  --nav-menu-index-color: #{$font-color-inverted};
-  --nav-menu-index-bgcolor: #{$bg-color-secondary};
-  --nav-menu-color: #{$font-color};
-  --nav-menu-bgcolor: #{$bg-color-primary};
-  --font-color-darken: #222222;
-  --font-color-lighten: #444444;
-}

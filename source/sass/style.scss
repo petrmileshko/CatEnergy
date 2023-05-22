@@ -9,7 +9,11 @@
 @import "blocks/visually-hidden.scss";
 @import "blocks/block-center.scss";
 @import "blocks/page.scss";
+@import "blocks/page-header.scss";
 
 /* Стили для Главная страница */
+@import "blocks/main-page.scss";
 /* Стили для Страница каталога */
+@import "blocks/catalog-page.scss";
 /* Стили для Страница формы заказов */
+@import "blocks/order-page.scss";

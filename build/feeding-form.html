@@ -7,13 +7,13 @@
   <meta name="author" content="Mileshko Peter">
   <meta name="copyright" content="https://htmlacademy.ru/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Оформление заказа: Магазин корма для котов</title>
 </head>
 
 <body class="page__body page__body--column">
 
-  <header class="page__header page-header">
+  <header class="page__header page-header block-center">
 
     <a class="page-header__logo logo" href="index.html">
       <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Корм для котов">
@@ -34,7 +34,7 @@
           <a class="menu__link" href="catalog.html">каталог продукции</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link menu__link--current" href="feeding-form.html">подбор программы</a>
+          <span class="menu__link menu__link--current">подбор программы</span>
         </li>
       </ul>
 
@@ -42,7 +42,7 @@
 
   </header>
 
-  <main class="page__content page__content--column order-page">
+  <main class="page__content page__content--column order-page block-center">
     <h1 class="page__title">Подбор программы</h1>
     <p class="order-page__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
@@ -136,8 +136,10 @@
 
   <footer class="page__footer contacts">
     <h2 class="visually-hidden">Контакты</h2>
-    <p class="contacts__heading">приглашаем к сотрудничеству дилеров!</p>
-    <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    <div class="block-center">
+      <p class="contacts__heading">приглашаем к сотрудничеству дилеров!</p>
+      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    </div>
     <img class="contacts__map" src="img/index/mobile/map.webp" width="320" height="362"
       alt="Карта с расположением главного офиса">
     <img class="contacts__location" src="img/index/mobile/map-pin.webp" width="56" height="52"
@@ -145,23 +147,24 @@
   </footer>
 
   <footer class="page__footer page-footer">
+    <div class="block-center">
+      <a class="page-footer__logo logo" href="index.html">
+        <img src="img/footer-logo.svg" width="128" height="24" alt="логотип">
+      </a>
 
-    <a class="page-footer__logo logo" href="index.html">
-      <img src="img/footer-logo.svg" width="128" height="24" alt="логотип">
-    </a>
+      <p class="page-footer__menu socials">
+        <a class="socials__link socials__link--vk" href=""><span class="visually-hidden">Вконтаке</span></a>
+        <a class="socials__link socials__link--vk" href=""><span class="visually-hidden">Instagram</span></a>
+        <a class="socials__link" href=""><span class="visually-hidden">Facebook</span></a>
+      </p>
 
-    <p class="page-footer__menu socials">
-      <a class="socials__link socials__link--vk" href=""><span class="visually-hidden">Вконтаке</span></a>
-      <a class="socials__link socials__link--vk" href=""><span class="visually-hidden">Instagram</span></a>
-      <a class="socials__link" href=""><span class="visually-hidden">Facebook</span></a>
-    </p>
-
-    <a class="page-footer__link designers">
-      <span class="designers__name">HTML Academy</span>
-      <img class="designers__image" src="img/logo-academy.svg" width="27" height="34"
-        alt="Логотип HTMLAcademy дизайнеры сайта">
-      <span class="visually-hidden">Дизайнеры сайта</span>
-    </a>
+      <a class="page-footer__link designers">
+        <span class="designers__name">HTML Academy</span>
+        <img class="designers__image" src="img/logo-academy.svg" width="27" height="34"
+          alt="Логотип HTMLAcademy дизайнеры сайта">
+        <span class="visually-hidden">Дизайнеры сайта</span>
+      </a>
+    </div>
   </footer>
 
 

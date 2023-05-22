@@ -1,26 +1,25 @@
 //Используемые шрифты и их насыщенность
-@mixin font_primary($weight) {
-  font-family: $font-primary;
+@mixin font_text($weight) {
+  font-family: $font-text;
   font-weight: $weight;
 }
 
-@mixin font_secondary($weight) {
-  font-family: $font-secondary;
+@mixin font_heading($weight) {
+  font-family: $font-heading;
   font-weight: $weight;
 }
 
-@mixin palette_buttons {
+//Конец шрифтов
+//Визуализация кнопок
+@mixin buttons_normal {
   color: $button-color;
   background-color: $button-bg-color;
 }
 
-//Конец шрифтов
-
-
 //Для тестирования
-@mixin only_for_test($test-color: #a21c32) {
-  outline: 2px solid $test-color;
-  outline-offset: -2px;
+@mixin out_line($test-color: #a21c32) {
+  outline: 1px solid $test-color;
+  outline-offset: -1px;
 }
 
 //Для тестирования

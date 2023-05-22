@@ -5,12 +5,12 @@
   margin: 0 auto;
 
   @media (min-width: $min-tablet) {
-    width: calc(100% - 60px);
+    width: calc(100% - 30px * 2);
     max-width: 708px;
   }
 
   @media (min-width: $min-desktop) {
-    width: calc(100% - 220px);
+    width: calc(100% - 100px * 2);
     max-width: 1220px;
   }
 }
