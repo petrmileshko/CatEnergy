@@ -14,9 +14,23 @@
   font-weight: $weight;
 }
 
+@mixin font_page_title {
+  @include font_heading($font-regular);
+  @include font_size_text(36px, 36px);
+}
+
+@mixin font_page_sub_title {
+  @include font_heading($font-regular);
+  @include font_size_text(36px, 40px);
+}
+
 //Конец шрифтов
 //Визуализация кнопок
 @mixin buttons_normal {
+  @include font_heading($font-regular);
+  @include font_size_text(14px, 18px);
+  text-transform: uppercase;
+  text-decoration: none;
   color: $button-color;
   background-color: $button-bg-color;
 }
@@ -27,7 +41,12 @@
   background-color: $bg-color-primary;
 }
 
-@mixin bg_footer {
+@mixin bg_green {
+  color: $font-color-inverted;
+  background-color: $bg-color-secondary;
+}
+
+@mixin bg_grey {
   color: $font-color-footer;
   background-color: $bg-color-footer;
 }

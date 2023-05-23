@@ -8,8 +8,11 @@
 // базовые глобальные
 @import "blocks/visually-hidden.scss";
 @import "blocks/block-center.scss";
+@import "blocks/button.scss";
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
+@import "blocks/title.scss";
+@import "blocks/sub-title.scss";
 @import "blocks/navigation.scss";
 @import "blocks/menu.scss";
 @import "blocks/contacts.scss";
@@ -19,6 +22,8 @@
 @import "blocks/main-page.scss";
 @import "blocks/hero.scss";
 @import "blocks/example.scss";
+@import "blocks/categories.scss";
+@import "blocks/category.scss";
 
 /* Стили для Страница каталога */
 @import "blocks/catalog-page.scss";
