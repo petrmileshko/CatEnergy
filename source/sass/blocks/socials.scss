@@ -1,0 +1,30 @@
+//Ссылки на соц сети
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 281px;
+  min-height: 63px;
+  margin: 0 0 22px 0;
+}
+
+.socials__link {
+  display: block;
+
+  @include out_line;
+
+  &--vk {
+    width: 23px;
+    height: 16px;
+  }
+
+  &--instagramm {
+    width: 23px;
+    height: 16px;
+  }
+
+  &--facebook {
+    width: 23px;
+    height: 16px;
+  }
+}

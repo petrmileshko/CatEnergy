@@ -1,0 +1,16 @@
+//Ссылка на разработчиков дизайна
+.designers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 281px;
+}
+
+.designers__name {
+  @include font_size_text(16px, 18px);
+}
+
+.designers__image {
+  width: 27px;
+  height: 34px;
+}
