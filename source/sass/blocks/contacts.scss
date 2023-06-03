@@ -21,7 +21,7 @@
   @include font_heading;
   @include font_size_text(16px, 20px);
   text-transform: uppercase;
-  color: #111111;
+  color: $font-color-additional;
 }
 
 .contacts__address {

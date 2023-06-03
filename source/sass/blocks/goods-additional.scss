@@ -1,0 +1,25 @@
+//Секция катлог дополнительных товаров сопутствующие основным
+.goods-additional {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.goods-additional__list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.goods-additional__item {
+  padding: 13px 0 19px 0;
+}
+
+.goods-additional__ordering {
+  @include font_heading($font-regular);
+  @include font_size_text(16px, 20px);
+}
+
+.goods-additional__offer {
+  margin-top: 35px;
+}

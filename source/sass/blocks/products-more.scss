@@ -1,0 +1,25 @@
+//Последний блок в каталоге - показать больше
+.products-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products-more__title {
+  @include font_heading($font-regular);
+  @include font_size_text(16px, 20px);
+  color: $font-color-additional;
+}
+
+.products-more__text {
+  @include font_size_text(12px, 16px);
+  color: $font-color-footer;
+}
+
+.products-more__show {
+  width: 100%;
+
+  @include font_heading($font-regular);
+  @include font_size_text(16px, 20px);
+  color: $font-color-footer;
+}

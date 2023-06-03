@@ -11,7 +11,7 @@
   margin: 0;
   min-width: 280px;
 
-  @include font_text($font-regular);
+  @include font_text();
   @include bg_normal;
   @include font_size_text(14px, 18px);
 
@@ -34,6 +34,13 @@
     // Модификатор для одноколоночной страницы flex
     flex-grow: 1;
   }
+}
+
+//Заголовок страницы
+.page__title {
+  margin-bottom: 49px;
+
+  @include font_page_title;
 }
 
 //Стили позиционирования "подвала" сайта / повторяется на всех страницах

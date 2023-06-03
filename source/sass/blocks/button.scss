@@ -1,4 +1,8 @@
 //
 .button {
   @include buttons_normal;
+
+  &--more {
+    background-color: #f2f2f2;
+  }
 }

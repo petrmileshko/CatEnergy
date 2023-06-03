@@ -1,0 +1,13 @@
+//Секция катлога с карточками товара внутри
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__item {
+  margin-top: 8px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 11px;
+  }
+}
