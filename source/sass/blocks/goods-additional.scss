@@ -8,6 +8,7 @@
 .goods-additional__list {
   display: flex;
   flex-direction: column;
+  padding-left: 0;
   margin-bottom: 35px;
 }
 
@@ -16,6 +17,7 @@
 }
 
 .goods-additional__ordering {
+  width: 100%;
   @include font_heading($font-regular);
   @include font_size_text(16px, 20px);
 }

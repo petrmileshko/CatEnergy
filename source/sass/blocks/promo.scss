@@ -2,6 +2,7 @@
 .promo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   min-height: 290px;
   background-color: $bg-color-secondary;
