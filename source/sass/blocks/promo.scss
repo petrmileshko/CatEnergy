@@ -11,5 +11,8 @@
 }
 
 .promo__text {
+  max-width: 161px;
+
   @include font_size_text(16px, 20px);
+  text-align: center;
 }

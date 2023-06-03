@@ -10,9 +10,8 @@
 
 .contacts__info {
   display: flex;
+  justify-content: space-between;
   padding: 26px 0;
-
-  @include bg_normal;
 }
 
 .contacts__heading {

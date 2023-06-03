@@ -2,6 +2,7 @@
 .button {
   @include buttons_normal;
   text-align: center;
+
   &--more {
     background-color: #f2f2f2;
   }

@@ -18,6 +18,7 @@
 
 .goods-additional__ordering {
   width: 100%;
+
   @include font_heading($font-regular);
   @include font_size_text(16px, 20px);
 }

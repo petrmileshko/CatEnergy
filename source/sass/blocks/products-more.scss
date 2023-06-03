@@ -8,6 +8,7 @@
 .products-more__title {
   @include font_heading($font-regular);
   @include font_size_text(16px, 20px);
+  text-transform: uppercase;
   color: $font-color-additional;
 }
 
