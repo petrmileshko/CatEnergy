@@ -1,0 +1,37 @@
+//Секция Живой пример со слайдером и фото кота
+.example {
+  padding: 25px 0 40px 0;
+
+  @include bg_grey;
+}
+
+.example__title {
+  margin-bottom: 40px;
+}
+
+.example__text {
+  margin-bottom: 20px;
+}
+
+.example__progress {
+  margin: 0 0 20px 0;
+}
+
+.example__parameter {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.example__value {
+  margin: 0;
+
+  @include font_heading($font-regular);
+  @include font_size_text(24px, 24px);
+}
+
+.example__costs {
+  margin: 0 0 40px 0;
+
+  @include font_heading($font-regular);
+  @include font_size_text(14px, 20px);
+}

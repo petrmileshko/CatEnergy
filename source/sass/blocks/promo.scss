@@ -1,0 +1,18 @@
+//
+.promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 290px;
+  background-color: $bg-color-secondary;
+  color: $font-color-inverted;
+  background-image: url("../img/backgrounds/offer-mobile.webp");
+}
+
+.promo__text {
+  max-width: 161px;
+
+  @include font_size_text(16px, 20px);
+  text-align: center;
+}

@@ -8,12 +8,36 @@
 // базовые глобальные
 @import "blocks/visually-hidden.scss";
 @import "blocks/block-center.scss";
+@import "blocks/button.scss";
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
+@import "blocks/title.scss";
+@import "blocks/sub-title.scss";
+@import "blocks/navigation.scss";
+@import "blocks/menu.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/socials.scss";
+@import "blocks/designers.scss";
+@import "blocks/logo.scss";
+@import "blocks/form.scss";
+@import "blocks/control.scss";
 
 /* Стили для Главная страница */
 @import "blocks/main-page.scss";
+@import "blocks/hero.scss";
+@import "blocks/example.scss";
+@import "blocks/categories.scss";
+@import "blocks/category.scss";
+@import "blocks/process.scss";
+
 /* Стили для Страница каталога */
 @import "blocks/catalog-page.scss";
+@import "blocks/catalog.scss";
+@import "blocks/product.scss";
+@import "blocks/products-more.scss";
+@import "blocks/goods-additional.scss";
+@import "blocks/card-goods.scss";
+@import "blocks/promo.scss";
 /* Стили для Страница формы заказов */
 @import "blocks/order-page.scss";

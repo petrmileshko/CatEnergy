@@ -1,0 +1,9 @@
+//Секция категории
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories__item {
+  margin-top: 20px;
+}

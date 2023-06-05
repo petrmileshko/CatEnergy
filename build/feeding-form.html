@@ -43,14 +43,14 @@
   </header>
 
   <main class="page__content page__content--column order-page block-center">
-    <h1 class="page__title">Подбор программы</h1>
+    <h1 class="order-page__title page__title">Подбор программы</h1>
     <p class="order-page__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
     <form class="order-page__anketa form" action="https://echo.htmlacademy.ru/" method="post">
       <fieldset class="form__group">
         <legend class="visually-hidden">Данные кота</legend>
 
-        <p class="form__subgroup">
+        <p class="form__subgroup form__subgroup--cat">
           <label class="form__label">
             <span>Имя:*</span>
             <input class="form__input" type="text" name="cat-name" placeholder="БАРСИК" required>
@@ -67,7 +67,7 @@
           </label>
         </p>
 
-        <p class="form__subgroup">
+        <p class="form__subgroup form__subgroup--purpose">
           <label class="form__label control control--radio">
             <input class="control__input" type="radio" name="purpose" value="slim" checked>
             <span class="control__marker">похудение</span>
@@ -85,8 +85,8 @@
         </p>
       </fieldset>
 
-      <fieldset class="form__group">
-        <legend class="form__group-legend title">Контактные данные (владельца кота)</legend>
+      <fieldset class="form__group form__group--contacts">
+        <legend class="form__group-legend">Контактные данные<br> (владельца кота)</legend>
         <label class="form__label">
           <span>E-mail:*</span>
           <input class="form__input" type="email" name="user-mail" placeholder="kuklachev@gmail.com" required>
@@ -98,16 +98,14 @@
         </label>
       </fieldset>
 
-      <div class="form__group">
-        <label class="form__group-legend title" for="comments">Комментарий</label>
-        <div>
-          <textarea class="form__textarea" name="comments" id="comments" rows="5"
-            placeholder="Расскажите обо всех повАдках кота"></textarea>
-        </div>
-      </div>
-
       <fieldset class="form__group">
-        <legend class="form__group-legend title">Дополнительно</legend>
+        <legend class="form__group-legend">Комментарий</legend>
+        <textarea class="form__textarea" name="comments" id="comments" rows="5"
+          placeholder="Расскажите обо всех повАдках кота"></textarea>
+      </fieldset>
+
+      <fieldset class="form__group form__group--additional">
+        <legend class="form__group-legend">Дополнительно</legend>
 
         <label class="form__label control control--checkbox">
           <input class="control__input" type="checkbox" name="goods-additional" value="sweet" checked>
@@ -136,7 +134,7 @@
 
   <footer class="page__footer contacts">
     <h2 class="visually-hidden">Контакты</h2>
-    <div class="block-center">
+    <div class="contacts__info block-center">
       <p class="contacts__heading">приглашаем к сотрудничеству дилеров!</p>
       <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
     </div>
@@ -146,16 +144,19 @@
       alt="Отметка на карте расположения офиса">
   </footer>
 
-  <footer class="page__footer page-footer">
-    <div class="block-center">
+  <footer class="page__footer">
+    <div class="page-footer block-center">
       <a class="page-footer__logo logo" href="index.html">
         <img src="img/footer-logo.svg" width="128" height="24" alt="логотип">
       </a>
 
       <p class="page-footer__menu socials">
-        <a class="socials__link socials__link--vk" href=""><span class="visually-hidden">Вконтаке</span></a>
-        <a class="socials__link socials__link--vk" href=""><span class="visually-hidden">Instagram</span></a>
-        <a class="socials__link" href=""><span class="visually-hidden">Facebook</span></a>
+        <a class="socials__link socials__link--vk" href="https://www.vk.ru/htmlacademy/"><span
+            class="visually-hidden">Вконтаке</span></a>
+        <a class="socials__link socials__link--instagramm" href="https://www.instagram.com/htmlacademy/"><span
+            class="visually-hidden">Instagram</span></a>
+        <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy"><span
+            class="visually-hidden">Facebook</span></a>
       </p>
 
       <a class="page-footer__link designers">

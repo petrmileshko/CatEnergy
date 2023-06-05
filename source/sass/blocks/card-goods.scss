@@ -1,0 +1,38 @@
+//
+.card-goods {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-goods__name {
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 0 13px 0;
+
+  @include font_heading($font-regular);
+  @include font_size_text(16px, 16px);
+  text-transform: uppercase;
+  color: $font-color-goods;
+}
+
+.card-goods__list {
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+  margin: 0 0 15px 0;
+  justify-content: space-between;
+}
+
+.card-goods__quantity {
+  margin-left: 0;
+
+  @include font_size_text(14px, 14px);
+  color: $font-color-footer;
+}
+
+.card-goods__price {
+  margin-left: 0;
+
+  @include font_size_text(14px, 14px);
+  color: $font-color-footer;
+}

@@ -1,0 +1,19 @@
+//Промоблок
+.hero {
+  padding: 27px 35px 0;
+
+  @include bg_green;
+  background-image: url("../img/backgrounds/hero-mobile.webp");
+}
+
+.hero__title {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.hero__slogan {
+  margin: 0;
+
+  @include font_heading($font-regular);
+  @include font_size_text(14px, 14px);
+}

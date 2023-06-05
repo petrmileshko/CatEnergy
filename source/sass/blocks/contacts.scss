@@ -1,0 +1,43 @@
+//Секция контакты
+.contacts {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+
+  @include font_size_text(14px, 20px);
+}
+
+.contacts__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 0;
+}
+
+.contacts__heading {
+  max-width: 139px;
+
+  @include font_heading;
+  @include font_size_text(16px, 20px);
+  text-transform: uppercase;
+  color: $font-color-additional;
+}
+
+.contacts__address {
+  max-width: 139px;
+  margin: 0;
+  color: $font-color-footer;
+}
+
+.contacts__map {
+  width: 100%;
+  max-height: 362px;
+  object-fit: cover;
+}
+
+.contacts__location {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+}

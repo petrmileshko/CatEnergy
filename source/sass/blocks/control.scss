@@ -1,0 +1,40 @@
+//Блок с полями для форм
+.control {
+  padding-left: 45px;
+
+  &::before {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    content: "";
+  }
+
+  &::after {
+    width: 14px;
+    height: 14px;
+    background-color: $bg-color-secondary;
+    border: 1px solid #cdcdcd;
+    content: "";
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+
+  &--radio::after {
+    border-radius: 50%;
+  }
+
+  &--checkbox::after {
+    width: 2px;
+    height: 8px;
+  }
+}
+
+.control__input {
+  display: none;
+}
+
+.control__marker {
+  @include font_size_text(16px, 18px);
+}

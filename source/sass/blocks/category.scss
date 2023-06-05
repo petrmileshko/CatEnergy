@@ -1,0 +1,24 @@
+//Блок отдельной категории
+.category {
+  padding: 21px 18px 19px;
+
+  @include bg_grey;
+}
+
+.category__title {
+  @include font_heading($font-regular);
+  @include font_size_text(24px, 37px);
+  text-transform: uppercase;
+  color: $font-color-basic;
+}
+
+.category__text {
+  margin: 0;
+}
+
+.category__link {
+  @include font_heading($font-regular);
+  @include font_size_text(16px, 16px);
+  text-transform: uppercase;
+  color: $font-color-basic;
+}
