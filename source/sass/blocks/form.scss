@@ -1,0 +1,70 @@
+//Блок формы
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+
+  &--additional {
+    margin-bottom: 34px;
+    color: $font-color-basic;
+  }
+
+  &--contacts {
+    color: $font-color-footer;
+  }
+}
+
+.form__subgroup {
+  display: flex;
+  flex-direction: column;
+
+  &--cat {
+    color: $font-color-footer;
+  }
+
+  &--purpose {
+    color: $font-color-goods;
+  }
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.form__input {
+  font: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+.form__group-legend {
+  margin-bottom: 34px;
+
+  @include font_form_legend;
+  text-transform: none;
+  color: $font-color-basic;
+}
+
+.form__textarea {
+  margin-top: 4px;
+  font: inherit;
+  text-transform: uppercase;
+  color: $font-color-footer;
+}
+
+.form__submit {
+  margin-bottom: 21px;
+}
+
+.form__note {
+  margin: 0;
+
+  @include font_text;
+  @include font_size_text(14px, 16px);
+}

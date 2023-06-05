@@ -38,8 +38,6 @@
 
 //Заголовок страницы
 .page__title {
-  margin-bottom: 49px;
-
   @include font_page_title;
 }
 

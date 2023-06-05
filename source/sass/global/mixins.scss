@@ -24,6 +24,11 @@
   @include font_size_text(36px, 40px);
 }
 
+@mixin font_form_legend($size: 24px, $height: 26px) {
+  @include font_heading($font-regular);
+  @include font_size_text($size, $height);
+}
+
 //Конец шрифтов
 //Визуализация кнопок
 @mixin buttons_normal {

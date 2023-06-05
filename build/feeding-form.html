@@ -43,14 +43,14 @@
   </header>
 
   <main class="page__content page__content--column order-page block-center">
-    <h1 class="page__title">Подбор программы</h1>
+    <h1 class="order-page__title page__title">Подбор программы</h1>
     <p class="order-page__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
     <form class="order-page__anketa form" action="https://echo.htmlacademy.ru/" method="post">
       <fieldset class="form__group">
         <legend class="visually-hidden">Данные кота</legend>
 
-        <p class="form__subgroup">
+        <p class="form__subgroup form__subgroup--cat">
           <label class="form__label">
             <span>Имя:*</span>
             <input class="form__input" type="text" name="cat-name" placeholder="БАРСИК" required>
@@ -67,7 +67,7 @@
           </label>
         </p>
 
-        <p class="form__subgroup">
+        <p class="form__subgroup form__subgroup--purpose">
           <label class="form__label control control--radio">
             <input class="control__input" type="radio" name="purpose" value="slim" checked>
             <span class="control__marker">похудение</span>
@@ -85,8 +85,8 @@
         </p>
       </fieldset>
 
-      <fieldset class="form__group">
-        <legend class="form__group-legend">Контактные данные (владельца кота)</legend>
+      <fieldset class="form__group form__group--contacts">
+        <legend class="form__group-legend">Контактные данные<br> (владельца кота)</legend>
         <label class="form__label">
           <span>E-mail:*</span>
           <input class="form__input" type="email" name="user-mail" placeholder="kuklachev@gmail.com" required>
@@ -98,15 +98,13 @@
         </label>
       </fieldset>
 
-      <div class="form__group">
-        <label class="form__group-legend" for="comments">Комментарий</label>
-        <div>
-          <textarea class="form__textarea" name="comments" id="comments" rows="5"
-            placeholder="Расскажите обо всех повАдках кота"></textarea>
-        </div>
-      </div>
-
       <fieldset class="form__group">
+        <legend class="form__group-legend">Комментарий</legend>
+        <textarea class="form__textarea" name="comments" id="comments" rows="5"
+          placeholder="Расскажите обо всех повАдках кота"></textarea>
+      </fieldset>
+
+      <fieldset class="form__group form__group--additional">
         <legend class="form__group-legend">Дополнительно</legend>
 
         <label class="form__label control control--checkbox">

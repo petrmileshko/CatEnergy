@@ -1,4 +1,22 @@
 //Страница заполнения формы
 .order-page {
+  @include font_heading($font-regular);
+  @include font_size_text(16px, 18px);
   background-color: $bg-color-primary;
+}
+
+.order-page__title {
+  margin-bottom: 37px;
+}
+
+.order-page__subtitle {
+  margin-bottom: 37px;
+
+  @include font_heading($font-regular);
+  @include font_size_text(14px, 18px);
+  text-transform: uppercase;
+}
+
+.order-page__anketa {
+  margin-bottom: 32px;
 }
