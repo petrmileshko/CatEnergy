@@ -9,7 +9,7 @@
 //Элемент страницы body
 .page__body {
   margin: 0;
-  min-width: 280px;
+  min-width: 320px;
 
   @include font_text();
   @include bg_normal;

@@ -1,7 +1,8 @@
 //Блок центровщик для размещения элементов по центру страницы
 // с заданной шириной
 .block-center {
-  width: calc(100% - 40px);
+  width: calc(100% - 20px * 2);
+  max-width: 280px;
   margin: 0 auto;
 
   @media (min-width: $min-tablet) {

@@ -4,10 +4,25 @@
   @include font_size_text(20px, 20px);
 }
 
-.page-header__logo {
+.page-header__nav {
   margin: 0;
 }
 
-.page-header__nav {
+.page-header__bar {
+  display: grid;
+  grid-template-columns: 34px 1fr 34px;
+  align-items: center;
+
+  @media (min-width: $min-tablet) {
+    grid-template-columns: 174px;
+  }
+}
+
+.page-header__logo {
+  grid-column: 1 / 3;
   margin: 0;
+
+  @media (min-width: $min-tablet) {
+    grid-column: 1 / -1;
+  }
 }

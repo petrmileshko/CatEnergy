@@ -1,6 +1,10 @@
 // Логтип
 .logo {
-  img {
-    display: block;
-  }
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+}
+
+.logo__title {
+  justify-self: center;
 }

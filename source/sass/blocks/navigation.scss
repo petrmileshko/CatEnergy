@@ -1,14 +1,24 @@
 //Блок навигации по сайту
 .navigation {
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $min-tablet) {
+    display: grid;
+    grid-template-columns: 174px 1fr;
+  }
 }
 
 .navigation__toggler {
+  justify-self: end;
   width: 24px;
   height: 16px;
+
+  @media (min-width: $min-tablet) {
+    display: none;
+  }
 }
 
 .navigation__menu {
-  display: flex;
-  flex-direction: column;
+  justify-self: end;
 }
