@@ -2,19 +2,33 @@
 .page-header {
   @include font_heading($font-medium);
   @include font_size_text(20px, 20px);
+
+  @media (min-width: $min-tablet) {
+    @include font_size_text(18px, 24px);
+  }
+
+  @media (min-width: $min-desktop) {
+    @include font_size_text(20px, 30px);
+  }
 }
 
 .page-header__nav {
   margin: 0;
+  padding-bottom: 2px;
 }
 
 .page-header__bar {
   display: grid;
   grid-template-columns: 34px 1fr 34px;
   align-items: center;
+  margin-bottom: 19px;
 
   @media (min-width: $min-tablet) {
     grid-template-columns: 174px;
+  }
+
+  @media (min-width: $min-tablet) {
+    grid-template-columns: 202px;
   }
 }
 

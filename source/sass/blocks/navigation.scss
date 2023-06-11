@@ -7,6 +7,10 @@
     display: grid;
     grid-template-columns: 174px 1fr;
   }
+
+  @media (min-width: $min-desktop) {
+    grid-template-columns: 202px 1fr;
+  }
 }
 
 .navigation__toggler {
@@ -20,5 +24,7 @@
 }
 
 .navigation__menu {
-  justify-self: end;
+  @media (min-width: $min-tablet) {
+    justify-self: end;
+  }
 }
