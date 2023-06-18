@@ -2,12 +2,46 @@
 .page-header {
   @include font_heading($font-medium);
   @include font_size_text(20px, 20px);
-}
 
-.page-header__logo {
-  margin: 0;
+  @media (min-width: $min-tablet) {
+    margin-bottom: 35px;
+
+    @include font_size_text(18px, 24px);
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 32px;
+
+    @include font_size_text(20px, 30px);
+  }
 }
 
 .page-header__nav {
   margin: 0;
+  padding-bottom: 2px;
+}
+
+.page-header__bar {
+  display: grid;
+  grid-template-columns: 34px 1fr 34px;
+  align-items: center;
+  margin-bottom: 19px;
+
+  @media (min-width: $min-tablet) {
+    grid-template-columns: 174px;
+    margin-bottom: unset;
+  }
+
+  @media (min-width: $min-tablet) {
+    grid-template-columns: 202px;
+  }
+}
+
+.page-header__logo {
+  grid-column: 1 / 3;
+  margin: 0;
+
+  @media (min-width: $min-tablet) {
+    grid-column: 1 / -1;
+  }
 }

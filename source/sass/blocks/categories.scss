@@ -2,8 +2,20 @@
 .categories {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $min-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 45px;
+  }
 }
 
 .categories__item {
   margin-top: 20px;
+
+  @media (min-width: $min-desktop) {
+    max-width: 570px;
+    margin: 0;
+  }
 }

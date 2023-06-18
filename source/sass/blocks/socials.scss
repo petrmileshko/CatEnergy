@@ -6,6 +6,12 @@
   width: 281px;
   min-height: 63px;
   margin: 0 0 22px 0;
+
+  @media (min-width: $min-tablet) {
+    min-width: 130px;
+    width: auto;
+    margin: 0;
+  }
 }
 
 .socials__link {

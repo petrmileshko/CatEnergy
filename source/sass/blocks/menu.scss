@@ -2,14 +2,23 @@
 .menu {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
   list-style-type: none;
+
+  @media (min-width: $min-tablet) {
+    flex-direction: row;
+  }
 }
 
 .menu__item {
-  padding: 22px 0 24px;
+  padding: 22px 0;
 }
 
 .menu__link {
+  display: block;
+  height: 20px;
   color: inherit;
   font: inherit;
   text-transform: uppercase;

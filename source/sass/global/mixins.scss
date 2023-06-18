@@ -22,6 +22,10 @@
 @mixin font_page_sub_title {
   @include font_heading($font-regular);
   @include font_size_text(36px, 40px);
+
+  @media (min-width: $min-tablet) {
+    @include font_size_text(60px, 60px);
+  }
 }
 
 @mixin font_form_legend($size: 24px, $height: 26px) {

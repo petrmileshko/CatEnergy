@@ -14,18 +14,16 @@
 <body class="page__body page__body--column">
 
   <header class="page__header page-header block-center" id="top">
-
-    <span class="page-header__logo logo">
-      <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Корм для котов">
-      <img src="img/logo-sign-mobile.svg" width="101" height="18" alt="" aria-hidden="true">
-    </span>
-
     <nav class="page-header__nav navigation">
-
-      <button class="navigation__toggler" type="button">
-        <span class="visually-hidden">Открыть</span>
-      </button>
-
+      <div class="page-header__bar">
+        <span class="page-header__logo logo">
+          <img class="logo__img" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Корм для котов">
+          <img class="logo__title" src="img/logo-sign-mobile.svg" width="101" height="18" alt="" aria-hidden="true">
+        </span>
+        <button class="navigation__toggler" type="button">
+          <span class="visually-hidden">Открыть</span>
+        </button>
+      </div>
       <ul class="navigation__menu menu">
         <li class="menu__item">
           <span class="menu__link menu__link--current">главная</span>
@@ -37,32 +35,32 @@
           <a class="menu__link" href="feeding-form.html">подбор программы</a>
         </li>
       </ul>
-
     </nav>
-
   </header>
 
   <main class="page__content page__content--column main-page">
 
-    <header class="main-page__header hero block-center">
-      <h1 class="hero__title title">Функциональное питание для котов</h1>
-      <p class="hero__slogan">Занялся собой? Займись котом!</p>
-      <img class="hero__image" src="img/index/mobile/can-pro.webp" width="280" height="270"
-        alt="Корм с курицей PRO 500 грамм.">
-      <a class="hero__action button" href="feeding-form.html">подобрать программу</a>
+    <header class="main-page__header hero">
+      <div class="hero__wrapper block-center">
+        <h1 class="hero__title title">Функциональное питание для котов</h1>
+        <p class="hero__slogan">Занялся собой? Займись котом!</p>
+        <img class="hero__image" src="img/index/mobile/can-pro.webp" width="280" height="270"
+          alt="Корм с курицей PRO 500 грамм.">
+        <a class="hero__action button" href="feeding-form.html">подобрать программу</a>
+      </div>
     </header>
 
     <section class="main-page__section categories block-center">
       <h2 class="visually-hidden">Категории кормов</h2>
 
-      <article class="categories__item category">
+      <article class="categories__item category category--tall">
         <h3 class="category__title">похудение</h3>
         <p class="category__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
           диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
         <a class="category__link" href="">каталог slim</a>
       </article>
 
-      <article class="categories__item category">
+      <article class="categories__item category category--fat">
         <h3 class="category__title">Набор массы</h3>
         <p class="category__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет
           вашему коту нарастить необходимые мышцы!</p>
@@ -90,7 +88,7 @@
     </section>
 
     <section class="example">
-      <div class="block-center">
+      <div class="example__wrapper block-center">
         <h2 class="example__title sub-title">Живой пример</h2>
 
         <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
@@ -136,7 +134,7 @@
 
   <footer class="page__footer">
     <div class="page-footer block-center">
-      <a class="page-footer__logo logo" href="#top">
+      <a class="page-footer__logo" href="#top">
         <img src="img/footer-logo.svg" width="128" height="24" alt="логотип">
       </a>
 

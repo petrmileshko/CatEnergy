@@ -2,12 +2,23 @@
 .designers {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: 281px;
+
+  @media (min-width: $min-tablet) {
+    justify-content: flex-end;
+    max-width: initial;
+    width: auto;
+  }
 }
 
 .designers__name {
   @include font_size_text(16px, 18px);
+
+  @media (min-width: $min-tablet) {
+    margin-right: 22px;
+  }
 }
 
 .designers__image {
