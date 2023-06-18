@@ -1,0 +1,14 @@
+//Кнолпки управления слайдера сравнения
+
+.togglers {
+  display: flex;
+}
+
+.togglers__button {
+  @include font_heading($font-regular);
+  @include font_size_text(16px, 20px);
+
+  @media (min-width: $min-tablet) {
+    @include font_size_text(20px, 30px);
+  }
+}
