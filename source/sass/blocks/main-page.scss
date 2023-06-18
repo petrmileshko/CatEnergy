@@ -11,4 +11,12 @@
 
 .main-page__section {
   margin-bottom: 20px;
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 26px;
+  }
 }
