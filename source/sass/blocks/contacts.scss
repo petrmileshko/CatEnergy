@@ -8,8 +8,10 @@
   @include font_size_text(14px, 20px);
 
   @media (min-width: $min-desktop) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    position: relative;
+    justify-content: center;
+    min-height: 400px;
+    z-index: -1;
   }
 }
 
@@ -19,13 +21,11 @@
   padding: 26px 0;
 
   @media (min-width: $min-desktop) {
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-    min-width: 565px;
-    margin: auto;
+    width: 565px;
     padding: 56px 80px;
+    margin: auto;
+    margin-left: 0;
     background-color: $bg-color-primary;
-    z-index: 1;
   }
 }
 
@@ -58,8 +58,12 @@
   object-fit: cover;
 
   @media (min-width: $min-desktop) {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
   }
 }
 
@@ -75,8 +79,8 @@
   }
 
   @media (min-width: $min-desktop) {
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
-    transform: none;
+    left: initial;
+    right: 419px;
+    bottom: 163px;
   }
 }
