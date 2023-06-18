@@ -5,10 +5,22 @@
   align-items: center;
   width: 100%;
   padding: 39px 0 22px 0;
+
+  @media (min-width: $min-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .page-footer__logo {
   margin-bottom: 32px;
+
+  @media (min-width: $min-tablet) {
+     display: flex;
+     align-items: center;
+     margin: 0;
+  }
+
 }
 
 .page-footer__menu {
