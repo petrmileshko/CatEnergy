@@ -8,10 +8,26 @@
 
 .catalog-page__title {
   margin-bottom: 41px;
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 84px;
+  }
 }
 
 .catalog-page__section {
   margin-bottom: 25px;
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 75px;
+  }
 }
 
 .catalog-page__section-heading {
@@ -19,4 +35,12 @@
 
   @include font_heading($font-regular);
   @include font_size_text(24px, 24px);
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 81px;
+  }
 }

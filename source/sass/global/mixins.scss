@@ -17,6 +17,10 @@
 @mixin font_page_title {
   @include font_heading($font-regular);
   @include font_size_text(36px, 36px);
+
+  @media (min-width: $min-tablet) {
+    @include font_size_text(60px, 60px);
+  }
 }
 
 @mixin font_page_sub_title {

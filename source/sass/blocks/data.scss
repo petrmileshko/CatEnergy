@@ -1,0 +1,21 @@
+//
+.data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (min-width: $min-desktop) {
+    grid-template-columns:  50px 1fr;
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.data__parameter {
+  justify-self: start;
+}
+
+.data__value {
+  justify-self: end;
+}
