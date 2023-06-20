@@ -48,6 +48,8 @@
   color: $font-color-footer;
 
   @media (min-width: $min-tablet) {
+    max-width: 160px;
+
     @include font_size_text(16px, 20px);
   }
 }
