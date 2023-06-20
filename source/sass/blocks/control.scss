@@ -1,8 +1,12 @@
 //Блок с полями для форм
 .control {
+  position: relative;
   padding-left: 45px;
 
   &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 30px;
     height: 30px;
     border: 1px solid #cdcdcd;
@@ -10,6 +14,9 @@
   }
 
   &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 14px;
     height: 14px;
     background-color: $bg-color-secondary;
@@ -37,4 +44,8 @@
 
 .control__marker {
   @include font_size_text(16px, 18px);
+
+  @media (min-width: $min-tablet) {
+    @include font_size_text(20px, 30px);
+  }
 }

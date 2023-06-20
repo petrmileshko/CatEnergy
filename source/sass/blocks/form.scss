@@ -1,43 +1,92 @@
 //Блок формы
 .form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .form__group {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 0;
+  border: none;
+  margin-bottom: 25px;
 
   &--additional {
-    margin-bottom: 34px;
     color: $font-color-basic;
+
+    @media (min-width: $min-tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: $min-desktop) {
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 61px;
+    }
   }
 
   &--contacts {
     color: $font-color-footer;
+  }
+
+  @media (min-width: $min-desktop) {
+    flex-direction: row;
+    column-gap: 80px;
   }
 }
 
 .form__subgroup {
   display: flex;
   flex-direction: column;
+  margin: 0;
 
   &--cat {
     color: $font-color-footer;
+
+    @media (min-width: $min-tablet) {
+      width: 100%;
+    }
+
+    @media (min-width: $min-desktop) {
+      width: auto;
+      min-width: 569px;
+    }
   }
 
   &--purpose {
     color: $font-color-goods;
+
+    @media (min-width: $min-tablet) {
+      width: 100%;
+      border: 1px solid $border-color-group;
+    }
   }
 }
 
 .form__label {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  margin-bottom: 13px;
   text-transform: uppercase;
+
+  span {
+    width: max-content;
+  }
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 13px;
+  }
 }
 
 .form__input {
+  flex-grow: 1;
   font: inherit;
   text-transform: inherit;
   color: inherit;
@@ -49,6 +98,20 @@
   @include font_form_legend;
   text-transform: none;
   color: $font-color-basic;
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 76px;
+
+    @include font_form_legend(36px, 36px);
+
+    &--additional {
+      margin-bottom: 57px;
+    }
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .form__textarea {
@@ -56,10 +119,25 @@
   font: inherit;
   text-transform: uppercase;
   color: $font-color-footer;
+
+  @media (min-width: $min-desktop) {
+    width: 100%;
+  }
 }
 
 .form__submit {
+  width: 100%;
   margin-bottom: 21px;
+
+  @media (min-width: $min-tablet) {
+    width: auto;
+    margin-bottom: 0;
+    padding: 13px 45px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding: 13px 188px;
+  }
 }
 
 .form__note {
@@ -67,4 +145,14 @@
 
   @include font_text;
   @include font_size_text(14px, 16px);
+
+  @media (min-width: $min-tablet) {
+    padding-left: 61px;
+
+    @include font_size_text(16px, 16px);
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-left: 81px;
+  }
 }

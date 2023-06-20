@@ -3,10 +3,28 @@
   @include font_heading($font-regular);
   @include font_size_text(16px, 18px);
   background-color: $bg-color-primary;
+
+  @media (min-width: $min-tablet) {
+    padding: 0 40px;
+
+    @include font_size_text(20px, 30px);
+  }
+
+  @media (min-width: $min-desktop) {
+    padding: 0;
+  }
 }
 
 .order-page__title {
   margin-bottom: 37px;
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 56px;
+  }
 }
 
 .order-page__subtitle {
@@ -15,8 +33,23 @@
   @include font_heading($font-regular);
   @include font_size_text(14px, 18px);
   text-transform: uppercase;
+
+  @media (min-width: $min-tablet) {
+    max-width: 323px;
+    margin-bottom: 66px;
+
+    @include font_size_text(20px, 30px);
+  }
 }
 
 .order-page__anketa {
   margin-bottom: 32px;
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 82px;
+  }
 }

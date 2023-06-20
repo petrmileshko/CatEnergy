@@ -30,6 +30,7 @@
 
   @media (min-width: $min-tablet) {
     grid-column: 1 / 2;
+
     @include font_size_text(20px, 20px);
   }
 
