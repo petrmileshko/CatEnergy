@@ -6,6 +6,8 @@
 
   @media (min-width: $min-tablet) {
     padding: 0 40px;
+
+    @include font_size_text(20px, 30px);
   }
 
   @media (min-width: $min-desktop) {
@@ -17,7 +19,6 @@
   margin-bottom: 37px;
 
   @media (min-width: $min-tablet) {
-    max-width: 432px;
     margin-bottom: 54px;
   }
 
@@ -34,6 +35,7 @@
   text-transform: uppercase;
 
   @media (min-width: $min-tablet) {
+    max-width: 323px;
     margin-bottom: 66px;
 
     @include font_size_text(20px, 30px);
