@@ -38,6 +38,8 @@
 
   @media (min-width: $min-tablet) {
     margin-bottom: 80px;
+
+    @include font_size_text(36px, 36px);
   }
 
   @media (min-width: $min-desktop) {

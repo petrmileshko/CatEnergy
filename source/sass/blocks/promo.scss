@@ -4,10 +4,39 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 290px;
   background-color: $bg-color-secondary;
   color: $font-color-inverted;
   background-image: url("../img/backgrounds/offer-mobile.webp");
+  padding: 59px 61px 43px 58px;
+
+  &::before {
+    width: 78px;
+    height: 80px;
+    margin-bottom: 48px;
+
+    @include out_line;
+    content: "";
+  }
+
+  @media (min-width: $min-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 51px 124px 61px 77px;
+
+    &::before {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $min-desktop) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 56px 43px 42px 41px;
+
+    &::before {
+      margin-bottom: 48px;
+    }
+  }
 }
 
 .promo__text {
@@ -15,4 +44,12 @@
 
   @include font_size_text(16px, 20px);
   text-align: center;
+
+  @media (min-width: $min-tablet) {
+    text-align: initial;
+  }
+
+  @media (min-width: $min-desktop) {
+    text-align: center;
+  }
 }
