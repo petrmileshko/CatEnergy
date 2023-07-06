@@ -26,6 +26,14 @@
 //Стили позиционирования "шапки" сайта / повторяется на всех страницах
 .page__header {
   padding: 10px 0 0 0;
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 32px;
+  }
 }
 
 //Стили позиционирования для основного содержимого страницы, не повторяется на других страницах

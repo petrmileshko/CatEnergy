@@ -4,14 +4,10 @@
   @include font_size_text(20px, 20px);
 
   @media (min-width: $min-tablet) {
-    margin-bottom: 35px;
-
     @include font_size_text(18px, 24px);
   }
 
   @media (min-width: $min-desktop) {
-    margin-bottom: 32px;
-
     @include font_size_text(20px, 30px);
   }
 }
