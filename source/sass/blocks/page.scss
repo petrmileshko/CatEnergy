@@ -25,9 +25,11 @@
 
 //Стили позиционирования "шапки" сайта / повторяется на всех страницах
 .page__header {
+  position: relative;
   padding: 10px 0 0 0;
 
   @media (min-width: $min-tablet) {
+    position: initial;
     margin-bottom: 35px;
   }
 

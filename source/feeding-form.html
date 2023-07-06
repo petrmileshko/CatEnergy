@@ -13,18 +13,18 @@
 
 <body class="page__body page__body--column">
 
-  <header class="page__header page-header block-center" id="top">
-    <nav class="page-header__nav navigation">
+  <header class="page__header page-header" id="top">
+    <nav class="page-header__nav navigation block-center">
       <div class="page-header__bar">
-        <a class="page-header__logo logo" href="index.html">
+        <span class="page-header__logo logo">
           <img class="logo__img" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Корм для котов">
           <img class="logo__title" src="img/logo-sign-mobile.svg" width="101" height="18" alt="" aria-hidden="true">
-        </a>
+        </span>
         <button class="navigation__toggler" type="button">
           <span class="visually-hidden">Открыть</span>
         </button>
       </div>
-      <ul class="navigation__menu menu">
+      <ul class="navigation__menu menu navigation__menu--nojs">
         <li class="menu__item">
           <a class="menu__link" href="index.html">главная</a>
         </li>
@@ -165,8 +165,7 @@
       </a>
     </div>
   </footer>
-
-
+  <script src="js/app.min.js"></script>
 </body>
 
 </html>
