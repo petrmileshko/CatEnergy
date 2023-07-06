@@ -1,15 +1,8 @@
 //Блок меню
 .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 0;
   margin: 0;
   list-style-type: none;
-
-  @media (min-width: $min-tablet) {
-    flex-direction: row;
-  }
 }
 
 .menu__item {

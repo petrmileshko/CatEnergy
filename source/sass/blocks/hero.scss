@@ -3,7 +3,10 @@
   padding: 27px 0;
 
   @include bg_green;
-  background-image: url("../img/backgrounds/hero-mobile.webp");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image: url("../img/backgrounds/hero-mobile.webp"),
+    linear-gradient($bg-color-secondary 0, $bg-color-secondary 302px, $bg-color-primary 302px);
 
   @media (min-width: $min-tablet) {
     @include bg_normal;
