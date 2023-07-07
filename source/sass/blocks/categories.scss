@@ -6,8 +6,13 @@
   @media (min-width: $min-tablet) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 45px;
+  }
+
+  @media (min-width: $min-desktop) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
 
@@ -17,5 +22,9 @@
   @media (min-width: $min-desktop) {
     max-width: 570px;
     margin: 0;
+
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
   }
 }

@@ -21,6 +21,14 @@
     flex-direction: column;
     min-height: 100%;
   }
+
+  @media (min-width: $min-tablet) {
+    padding-top: 24px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-top: 53px;
+  }
 }
 
 //Стили позиционирования "шапки" сайта / повторяется на всех страницах

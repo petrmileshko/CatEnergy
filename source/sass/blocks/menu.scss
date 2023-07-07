@@ -3,17 +3,70 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  @media (min-width: $min-desktop) {
+    &--main {
+      color: $font-color-inverted;
+    }
+  }
 }
 
 .menu__item {
-  padding: 22px 0;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+
+  &:first-of-type {
+    border-top: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $min-tablet) {
+    width: initial;
+    border: none;
+
+    &:first-of-type {
+      border: none;
+    }
+  }
 }
 
 .menu__link {
   display: block;
-  height: 20px;
+  padding: 22px 0;
   color: inherit;
   font: inherit;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: $min-tablet) {
+    position: relative;
+    padding: 0;
+    min-height: 36px;
+
+    &--current::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $bg-color-secondary;
+      content: "";
+    }
+
+    &--current-main::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $bg-color-secondary;
+      content: "";
+    }
+  }
+
+  @media (min-width: $min-desktop) {
+    &--current-main::after {
+      background-color: $bg-color-primary;
+    }
+  }
 }

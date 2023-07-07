@@ -4,12 +4,13 @@
 
   @include bg_green;
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 60% 0;
   background-image: url("../img/backgrounds/hero-mobile.webp"),
     linear-gradient($bg-color-secondary 0, $bg-color-secondary 302px, $bg-color-primary 302px);
 
   @media (min-width: $min-tablet) {
     @include bg_normal;
+    background-color: transparent;
     background-image: none;
   }
 
@@ -17,15 +18,18 @@
     position: relative;
     padding: 0;
 
-    &::before {
+    &::after {
       position: absolute;
-      top: 0;
+      top: -200px;
       right: 0;
       bottom: 0;
-      width: 50%;
+      left: 50%;
+      z-index: -2;
 
       @include bg_green;
-      background-image: url("../img/backgrounds/hero-mobile.webp");
+      background-repeat: no-repeat;
+      background-position: 0 55px;
+      background-image: url("../img/backgrounds/hero-descktop.webp");
       content: "";
     }
   }
@@ -40,6 +44,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 120px 110px 55px 526px;
+    padding-left: 117px;
+    background-color: transparent;
   }
 
   @media (min-width: $min-desktop) {
@@ -108,10 +114,17 @@
 }
 
 .hero__action {
+  width: 100%;
+  padding: 10px 0;
+
   @media (min-width: $min-tablet) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     justify-self: start;
+    width: auto;
+    padding: 10px 26px;
+
+    @include font_size_text(20px, 20px);
   }
 
   @media (min-width: $min-desktop) {

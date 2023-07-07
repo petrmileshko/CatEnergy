@@ -1,6 +1,10 @@
 //Страница главная index
 .main-page {
   background-color: $bg-color-primary;
+
+  @media (min-width: $min-tablet) {
+    background-color: transparent;
+  }
 }
 
 .main-page__header {
