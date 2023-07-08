@@ -43,7 +43,7 @@
   @media (min-width: $min-tablet) {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 120px 110px 55px 526px;
+    grid-template-rows: 120px 100px 58px 532px;
     padding-left: 117px;
     background-color: transparent;
   }
@@ -116,6 +116,7 @@
 .hero__action {
   width: 100%;
   padding: 10px 0;
+
   @include font_size_text(14px, 18px);
 
   @media (min-width: $min-tablet) {
@@ -141,6 +142,6 @@
   }
 
   &:active {
-    opacity: 0.30000001192092896;
+    opacity: 0.3;
   }
 }
