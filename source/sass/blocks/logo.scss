@@ -3,6 +3,14 @@
   display: grid;
   grid-template-columns: 34px 1fr;
   align-items: center;
+
+  &:hover {
+    opacity: 0.800000011920929;
+  }
+
+  &:active {
+    opacity: 0.6000000238418579;
+  }
 }
 
 .logo__title {

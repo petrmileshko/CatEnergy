@@ -4,7 +4,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  row-gap: 22px;
   width: 100%;
   padding: 21px 18px 19px;
 
@@ -39,6 +38,7 @@
     display: grid;
     grid-template-columns: 360px 268px;
     grid-template-rows: 60px 144px 38px;
+    align-items: initial;
     row-gap: initial;
     width: auto;
     padding: 71px 62px 53px 52px;
@@ -67,7 +67,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 41px 52px 55px 51px;
+    align-items: center;
+    padding: 41px 51px 59px 52px;
 
     &::before,
     &::after {
@@ -80,12 +81,13 @@
     &--tall::before {
       width: 100px;
       height: 106px;
-      margin-right: 0;
+      margin-right: 62px;
     }
 
     &--fat::before {
       width: 134px;
       height: 100px;
+      margin-right: 47px;
     }
   }
 }
@@ -111,17 +113,24 @@
 
 .category__text {
   margin: 0;
+  padding: 22px 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $min-tablet) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-
+    padding: 0;
+    margin-bottom: 52px;
+    border: none;
     @include font_size_text(16px, 24px);
   }
 
   @media (min-width: $min-desktop) {
     grid-column: initial;
     grid-row: initial;
+    padding: 39px 0 27px 0;
+    margin-bottom: 0;
   }
 }
 

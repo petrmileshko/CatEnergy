@@ -50,7 +50,7 @@
 
   @media (min-width: $min-desktop) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 82px 120px 112px 185px;
+    grid-template-rows: 77px 120px 100px 256px;
     padding-left: 80px;
   }
 }
@@ -93,7 +93,7 @@
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     margin: 0;
-    margin-top: 40px;
+    margin-top: 0;
   }
 }
 
@@ -132,5 +132,15 @@
     grid-column: 1 / 2;
     grid-row: 4 / 5;
     justify-self: start;
+    align-self: start;
+    margin-top: 12px;
+  }
+
+  &:hover {
+    background-color: $button-bg-hover;
+  }
+
+  &:active {
+    opacity: 0.30000001192092896;
   }
 }
