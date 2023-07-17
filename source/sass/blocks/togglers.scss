@@ -1,14 +1,63 @@
 //Кнолпки управления слайдера сравнения
 
 .togglers {
-  display: flex;
+  display: grid;
+  grid-template-columns: 49px 1fr 49px;
+  align-items: center;
+  gap: 13px;
 }
 
 .togglers__button {
+  padding: 0 2px 2px;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+
   @include font_heading($font-regular);
   @include font_size_text(16px, 20px);
 
   @media (min-width: $min-tablet) {
     @include font_size_text(20px, 30px);
+  }
+}
+
+.togglers__switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 14px;
+  padding: 4px 6px;
+  background-color: $bg-color-primary;
+  border: 1px solid $border-color-examples;
+  border-radius: 6px;
+
+  &::after {
+    width: 36px;
+    height: 6px;
+    background-color: $button-bg-color;
+    border-radius: 6px;
+    content: "";
+  }
+
+  .togglers--before & {
+    justify-content: flex-start;
+  }
+
+  .togglers--after & {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $min-tablet) {
+    display: none;
+  }
+}
+
+.togglers__bar {
+  display: none;
+
+  @media (min-width: $min-tablet) {
+    display: block;
   }
 }

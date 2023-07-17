@@ -97,23 +97,33 @@
           в день. </p>
 
         <dl class="example__progress">
-          <dt class="example__parameter">снижение веса</dt>
-          <dd class="example__value">5 КГ</dd>
+          <div class="example__progress-wrapper">
+            <dt class="example__parameter">снижение веса</dt>
+            <dd class="example__value">5 КГ</dd>
+          </div>
 
-          <dt class="example__parameter">затрачено времени</dt>
-          <dd class="example__value">60 ДНЕЙ</dd>
+          <div class="example__progress-wrapper">
+            <dt class="example__parameter">затрачено времени</dt>
+            <dd class="example__value">60 ДНЕЙ</dd>
+          </div>
         </dl>
         <p class="example__costs">Затраты на питание: 15 000 РУБ. </p>
 
         <div class="example__compare images">
-          <img class="images__item" src="img/index/mobile/cat-before.webp" width="280" height="232"
-            alt="Толстый и ленивый кот на обычном питании.">
-          <img class="images__item" src="img/index/mobile/cat-after.webp" width="243" height="232"
-            alt="Стройный и активный кот на нашем функциональном питании  ">
+          <div class="images__item images__item--before images__item--active">
+            <img src="img/index/mobile/cat-before.webp" width="280" height="232"
+              alt="Толстый и ленивый кот на обычном питании.">
+          </div>
+          <div class="images__item images__item--after">
+            <img src="img/index/mobile/cat-after.webp" width="243" height="232"
+              alt="Стройный и активный кот на нашем функциональном питании  ">
+          </div>
         </div>
 
-        <div class="example__compare-control togglers">
+        <div class="example__compare-control togglers togglers--before">
           <button class="togglers__button">было</button>
+          <div class="togglers__switch"></div>
+          <input class="togglers__bar" type="range" value="50" min="17" max="83">
           <button class="togglers__button">стало</button>
         </div>
       </div>

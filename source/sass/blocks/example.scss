@@ -63,12 +63,14 @@
 }
 
 .example__progress {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
   margin: 0 0 20px 0;
 
   @media (min-width: $min-tablet) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    display: flex;
   }
 
   @media (min-width: $min-desktop) {
@@ -78,17 +80,38 @@
   }
 }
 
+.example__progress-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 14px 8px 0;
+  border: 1px solid $border-color-examples;
+  border-radius: 4px;
+}
+
 .example__parameter {
+  width: 87px;
+  margin-bottom: -12px;
+  padding: 0 4px;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 1;
+  text-align: center;
+  text-transform: lowercase;
+
+  @include bg_grey;
 
   @media (min-width: $min-tablet) {
+    width: auto;
+    margin-bottom: -6px;
+    padding: 0 7px;
+
     @include font_size_text(14px, 14px);
   }
 }
 
 .example__value {
   margin: 0;
+  margin-bottom: 12px;
 
   @include font_heading($font-regular);
   @include font_size_text(24px, 24px);
@@ -100,6 +123,7 @@
 
 .example__costs {
   margin: 0 0 40px 0;
+  align-self: center;
 
   @include font_heading($font-regular);
   @include font_size_text(14px, 20px);
@@ -124,26 +148,22 @@
 }
 
 .example__compare {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 15px;
 
   @media (min-width: $min-tablet) {
     grid-column: 1 / -1;
     grid-row: 4 / 5;
-    flex-direction: row;
-    justify-content: center;
   }
 
   @media (min-width: $min-desktop) {
     grid-column: 2 / 3;
     grid-row: 1 / 4;
-    flex-direction: row;
-    justify-content: center;
   }
 }
 
 .example__compare-control {
+  align-self: center;
+
   @media (min-width: $min-tablet) {
     grid-column: 1 / -1;
     grid-row: 5 / 6;

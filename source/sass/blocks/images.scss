@@ -1,0 +1,38 @@
+.images {
+  @media (min-width: $min-tablet) {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    padding: 0 58px;
+    overflow: hidden;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding: 0;
+  }
+}
+
+.images__item {
+  display: none;
+
+  @media (min-width: $min-tablet) {
+    display: flex;
+    overflow: hidden;
+
+    img {
+      width: 594px;
+      height: 511px;
+      max-width: none;
+    }
+  }
+
+  &--active {
+    display: block;
+  }
+
+  &--after {
+    @media (min-width: $min-tablet) {
+      justify-content: end;
+    }
+  }
+
+}
