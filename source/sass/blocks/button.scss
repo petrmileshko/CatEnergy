@@ -3,6 +3,7 @@
   @include buttons_normal;
   text-align: center;
   border: none;
+  cursor: pointer;
 
   @include font_size_text(16px, 20px);
 

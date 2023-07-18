@@ -13,12 +13,23 @@
   border: none;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
 
   @include font_heading($font-regular);
   @include font_size_text(16px, 20px);
 
   @media (min-width: $min-tablet) {
     @include font_size_text(20px, 30px);
+
+    border-bottom: 1px dotted rgba($font-color-basic, 0.24);
+
+    &:hover {
+      border-bottom: 1px solid rgba($font-color-basic, 0.4);
+    }
+
+    &:active {
+      border-bottom-color: transparent;
+    }
   }
 }
 
@@ -58,6 +69,75 @@
   display: none;
 
   @media (min-width: $min-tablet) {
+    appearance: none;
+
     display: block;
+    background-color: transparent;
   }
+}
+
+.togglers__bar::-moz-range-thumb {
+  width: 34px;
+  height: 34px;
+  box-sizing: border-box;
+
+  background-color: $bg-color-secondary;
+  border: 11px solid $border-color-thumb;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px $border-color-examples,
+    0 1px 3px rgba($font-color-basic, 0.16);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow:
+      0 0 0 1px $border-color-examples,
+      0 2px 4px rgba($font-color-basic, 0.19);
+  }
+
+  &:active {
+    box-shadow:
+      0 0 0 1px $bg-color-secondary,
+      0 3px 5px rgba($font-color-basic, 0.2);
+  }
+}
+
+.togglers__bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 34px;
+  height: 34px;
+  box-sizing: border-box;
+  margin-top: -12px;
+  background-color: $bg-color-secondary;
+  border: 11px solid $border-color-thumb;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px $border-color-examples,
+    0 1px 3px rgba($font-color-basic, 0.16);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow:
+      0 0 0 1px $border-color-examples,
+      0 2px 4px rgba($font-color-basic, 0.19);
+  }
+
+  &:active {
+    box-shadow:
+      0 0 0 1px $bg-color-secondary,
+      0 3px 5px rgba($font-color-basic, 0.2);
+  }
+}
+
+.togglers__bar::-webkit-slider-runnable-track,
+.togglers__bar::-moz-range-track {
+  height: 8px;
+  background-color: $bg-color-bar;
+  border-radius: 6px;
+}
+
+.togglers__bar::-webkit-slider-runnable-track {
+  height: 8px;
+  background-color: $bg-color-bar;
+  border-radius: 6px;
 }

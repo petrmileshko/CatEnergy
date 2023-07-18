@@ -11,6 +11,20 @@
     max-width: initial;
     width: auto;
   }
+
+  &:hover {
+    .designers__image {
+      color: $button-bg-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .designers__image {
+      color: $button-bg-color;
+    }
+  }
 }
 
 .designers__name {
@@ -19,9 +33,4 @@
   @media (min-width: $min-tablet) {
     margin-right: 22px;
   }
-}
-
-.designers__image {
-  width: 27px;
-  height: 34px;
 }

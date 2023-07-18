@@ -17,20 +17,30 @@
 .socials__link {
   display: block;
 
-  @include out_line;
+  // &--vk {
+  //   width: 23px;
+  //   height: 16px;
+  // }
 
-  &--vk {
-    width: 23px;
-    height: 16px;
+  // &--youtube {
+  //   width: 23px;
+  //   height: 16px;
+  // }
+
+  // &--telegramm {
+  //   width: 23px;
+  //   height: 16px;
+  // }
+
+  &:hover {
+    color: $button-bg-color;
   }
 
-  &--instagramm {
-    width: 23px;
-    height: 16px;
+  &:active {
+    color: rgba($button-bg-color, 0.3);
   }
 
-  &--facebook {
-    width: 23px;
-    height: 16px;
+  svg {
+    display: block;
   }
 }
