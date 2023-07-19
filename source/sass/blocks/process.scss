@@ -22,14 +22,14 @@
   @media (min-width: $min-tablet) {
     display: grid;
     grid-template-columns: repeat(2, 250px);
-    grid-template-rows: max-content max-content;
+    grid-template-rows: max-content;
     column-gap: 137px;
     row-gap: 37px;
   }
 
   @media (min-width: $min-desktop) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: max-content;
+    grid-template-rows: 280px;
     justify-content: center;
     column-gap: initial;
   }

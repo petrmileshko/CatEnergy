@@ -43,14 +43,14 @@
   @media (min-width: $min-tablet) {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 120px 100px 58px 532px;
+    grid-template-rows: 120px min-content 58px 532px;
     padding-left: 117px;
     background-color: transparent;
   }
 
   @media (min-width: $min-desktop) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 77px 120px 100px 256px;
+    grid-template-rows: 77px min-content 100px 256px;
     padding-left: 80px;
   }
 }

@@ -2,6 +2,21 @@ if (document.querySelector('.navigation__menu--nojs') !== null) {
   document.querySelector('.navigation__menu--nojs').classList.remove('navigation__menu--nojs');
 }
 
+if (document.querySelector('.navigation__toggler--nojs') !== null) {
+  document.querySelector('.navigation__toggler--nojs').classList.remove('navigation__toggler--nojs');
+}
+
+if (document.querySelector('.block-center--nojs') !== null) {
+  let a = document.querySelector('.block-center--nojs');
+  a.classList.remove('block-center--nojs');
+  a.classList.add('block-center');
+}
+
+if (document.querySelector('.page-header__bar') !== null) {
+  document.querySelector('.page-header__bar').classList.remove('block-center');
+}
+
+
 //Мобильное меню - бургер
 if (document.querySelector('.navigation__toggler') !== null && document.querySelector('.navigation__menu') !== null) {
   let navMenu = document.querySelector('.navigation__menu');
