@@ -20,7 +20,7 @@
   display: grid;
   grid-template-columns: 34px 1fr 34px;
   align-items: center;
-  margin-bottom: 19px;
+  margin-bottom: 0;
 
   @media (min-width: $min-tablet) {
     grid-template-columns: 174px;

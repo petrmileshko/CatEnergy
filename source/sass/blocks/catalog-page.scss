@@ -2,12 +2,22 @@
 .catalog-page {
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
   background-color: $bg-color-primary;
 }
 
 .catalog-page__title {
+  position: relative;
   margin-bottom: 41px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    height: 1px;
+    background-color: $bg-color-devider;
+    content: "";
+  }
 
   @media (min-width: $min-tablet) {
     margin-bottom: 82px;
