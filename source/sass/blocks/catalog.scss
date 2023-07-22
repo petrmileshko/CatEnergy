@@ -23,17 +23,16 @@
 }
 
 .catalog__item {
-  margin-top: 8px;
+  position: relative;
+  margin-bottom: 11px;
 
-  &:not(:last-of-type) {
-    margin-bottom: 11px;
-  }
-
-  @media (min-width: $min-tablet) {
-    margin-top: 0;
-
-    &:not(:last-of-type) {
-      margin-bottom: 0;
-    }
+  &::before {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    top: 0;
+    left: calc(50% - 50vw);
+    background-color: $bg-color-catalog;
+    content: "";
   }
 }
