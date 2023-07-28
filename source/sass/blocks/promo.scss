@@ -6,7 +6,7 @@
   align-items: center;
   background-color: $bg-color-secondary;
   color: $font-color-inverted;
-  background-image: url("../img/backgrounds/offer-mobile.webp");
+  background-image: url("../img/backgrounds/offer-mobile.jpg");
   padding: 59px 61px 43px 58px;
 
   &::before {
@@ -14,7 +14,10 @@
     height: 80px;
     margin-bottom: 48px;
 
-    @include out_line;
+    background-image: url("../img/catalog/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     content: "";
   }
 
@@ -24,6 +27,8 @@
     padding: 51px 124px 61px 77px;
 
     &::before {
+      width: 80px;
+      height: 83px;
       margin-bottom: 0;
     }
   }

@@ -42,10 +42,31 @@
 }
 
 .catalog-page__section-heading {
+  position: relative;
   margin-bottom: 36px;
 
   @include font_heading($font-regular);
   @include font_size_text(24px, 24px);
+  background-color: transparent;
+
+  span {
+    position: relative;
+    display: block;
+    max-width: 248px;
+    padding-right: 22px;
+    background-color: $bg-color-primary;
+    z-index: 1;
+  }
+
+  &::before {
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    top: 15px;
+    right: calc(50% - 50vw);
+    background-color: $bg-color-secondary;
+    content: "";
+  }
 
   @media (min-width: $min-tablet) {
     margin-bottom: 80px;

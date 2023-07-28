@@ -29,7 +29,27 @@
 }
 
 .goods-additional__item {
-  margin-top: 13px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    top: 0;
+    left: calc(50% - 50vw);
+    background-color: $bg-color-catalog;
+    content: "";
+  }
+
+  &:last-of-type::after {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    bottom: 0;
+    left: calc(50% - 50vw);
+    background-color: $bg-color-catalog;
+    content: "";
+  }
 
   @media (min-width: $min-tablet) {
     margin-top: 0;
@@ -38,12 +58,15 @@
 
 .goods-additional__ordering {
   width: 100%;
+  padding: 10px 0;
 
   @include font_heading($font-regular);
   @include font_size_text(16px, 20px);
 }
 
 .goods-additional__offer {
+  margin-top: 35px;
+
   @media (min-width: $min-desktop) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;

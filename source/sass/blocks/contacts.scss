@@ -4,14 +4,15 @@
   flex-direction: column;
   position: relative;
   padding: 0;
+  background-color: $bg-color-footer;
 
   @include font_size_text(14px, 20px);
-  @include bg_normal;
 
   @media (min-width: $min-desktop) {
     position: relative;
     justify-content: center;
     min-height: 400px;
+    background-color: $bg-color-primary;
   }
 }
 
