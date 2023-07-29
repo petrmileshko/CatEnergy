@@ -2,6 +2,7 @@
 .data {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: max-content;
 
   @media (min-width: $min-desktop) {
     grid-template-columns: 50px 1fr;
@@ -14,9 +15,22 @@
 
 .data__parameter {
   justify-self: start;
+
+  @media (min-width: $min-tablet) {
+    width: 100%;
+    padding: 7px 0 9px 0;
+    border-bottom: 1px solid $border-color-examples;
+  }
 }
 
 .data__value {
   justify-self: end;
   width: max-content;
+
+  @media (min-width: $min-tablet) {
+    width: 100%;
+    padding: 7px 0 9px 0;
+    border-bottom: 1px solid $border-color-examples;
+    text-align: right;
+  }
 }

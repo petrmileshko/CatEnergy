@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 78px;
   padding: 25px 0 25px 0;
 
   &::after {
@@ -14,6 +13,16 @@
     left: calc(50% - 50vw);
     background-color: $bg-color-catalog;
     content: "";
+  }
+
+  @media (width: $min-tablet) {
+    padding: 0;
+    margin-top: 80px;
+    border: 1px solid $bg-color-catalog;
+
+    &::after {
+      content: none;
+    }
   }
 }
 
@@ -44,9 +53,16 @@
 
   @media (min-width: $min-tablet) {
     max-width: 134px;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
+    padding: 163px 0 0 0;
 
     @include font_size_text(20px, 22px);
+
+    &::before {
+      top: 52px;
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 
@@ -74,6 +90,7 @@
   color: $font-color-footer;
 
   @media (min-width: $min-tablet) {
-    padding: 20px 0;
+    width: auto;
+    padding: 10px 79px;
   }
 }
