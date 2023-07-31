@@ -18,7 +18,7 @@
   @media (width: $min-tablet) {
     padding: 0;
     margin-top: 80px;
-    border: 1px solid $bg-color-catalog;
+    border: 1px solid $border-color-additional;
 
     &::after {
       content: none;
