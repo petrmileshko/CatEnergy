@@ -15,7 +15,7 @@
     content: "";
   }
 
-  @media (width: $min-tablet) {
+  @media (min-width: $min-tablet) {
     padding: 0;
     margin-top: 80px;
     border: 1px solid $border-color-additional;
