@@ -7,6 +7,9 @@
   background-color: $bg-color-secondary;
   color: $font-color-inverted;
   background-image: url("../img/backgrounds/offer-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
   padding: 59px 61px 43px 58px;
 
   &::before {
@@ -25,6 +28,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 51px 124px 61px 77px;
+    background-position: 0 -335px;
 
     &::before {
       width: 80px;
@@ -36,7 +40,9 @@
   @media (min-width: $min-desktop) {
     flex-direction: column;
     justify-content: center;
+    max-height: 289px;
     padding: 56px 43px 42px 41px;
+    background-position: center;
 
     &::before {
       margin-bottom: 48px;
