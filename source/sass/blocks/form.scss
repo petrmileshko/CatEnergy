@@ -6,6 +6,7 @@
 }
 
 .form__group {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -108,6 +109,25 @@
   text-transform: none;
   color: $font-color-basic;
 
+  span {
+    position: relative;
+    display: block;
+    max-width: 248px;
+    padding-right: 22px;
+    background-color: $bg-color-primary;
+    z-index: 1;
+  }
+
+  &::before {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    top: 15px;
+    right: calc(50% - 50vw);
+    background-color: $bg-color-secondary;
+    content: "";
+  }
+
   @media (min-width: $min-tablet) {
     margin-bottom: 76px;
 
@@ -119,6 +139,28 @@
 
     br {
       display: none;
+    }
+
+    span {
+      width: max-content;
+      max-width: initial;
+      padding: 0 37px 0 36px;
+    }
+
+    &::before {
+      width: 100vw;
+      top: 20px;
+    }
+  }
+
+  @media (min-width: $min-desktop) {
+    span {
+      left: -40px;
+      padding: 0 40px 0 35px;
+    }
+
+    &::before {
+      left: calc(50% - 50vw);
     }
   }
 }
