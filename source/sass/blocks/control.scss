@@ -1,12 +1,34 @@
 //Блок с полями для форм
 .control {
-  position: relative;
-  padding-left: 45px;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 16px;
+  align-items: center;
+}
+
+.control__input {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  opacity: 0;
+}
+
+.control__marker {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 16px;
+  align-items: center;
+
+  @include font_size_text(16px, 18px);
+  grid-template-columns: 30px 1fr;
 
   &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     width: 30px;
     height: 30px;
     border: 1px solid #cdcdcd;
@@ -14,36 +36,31 @@
   }
 
   &::after {
-    position: absolute;
-    top: 0;
-    left: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     width: 14px;
     height: 14px;
-    background-color: $bg-color-secondary;
-    border: 1px solid #cdcdcd;
+    margin: auto;
     content: "";
   }
 
-  &--radio::before {
+  .control--radio &::before {
     border-radius: 50%;
   }
 
-  &--radio::after {
+  .control--radio .control__input:checked + &::after {
+    background-color: $bg-color-secondary;
     border-radius: 50%;
   }
 
-  &--checkbox::after {
-    width: 2px;
-    height: 8px;
+  .control--checkbox .control__input:checked + &::after {
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/order/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
-}
-
-.control__input {
-  display: none;
-}
-
-.control__marker {
-  @include font_size_text(16px, 18px);
 
   @media (min-width: $min-tablet) {
     @include font_size_text(20px, 30px);

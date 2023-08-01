@@ -44,6 +44,7 @@
   margin: 0;
 
   &--cat {
+    padding-bottom: 24px;
     color: $font-color-footer;
 
     @media (min-width: $min-tablet) {
@@ -57,6 +58,7 @@
   }
 
   &--purpose {
+    padding-bottom: 20px;
     color: $font-color-goods;
 
     @media (min-width: $min-tablet) {
@@ -69,11 +71,16 @@
 .form__label {
   display: flex;
   width: 100%;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
   text-transform: uppercase;
 
   span {
     width: max-content;
+    margin: auto 12px auto 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
   }
 
   @media (min-width: $min-tablet) {
@@ -87,9 +94,11 @@
 
 .form__input {
   flex-grow: 1;
+  padding: 13px 0 14px 16px;
   font: inherit;
   text-transform: inherit;
   color: inherit;
+  border: 1px solid $border-color-group;
 }
 
 .form__group-legend {
