@@ -13,6 +13,7 @@
   height: 30px;
   margin: 0;
   opacity: 0;
+  cursor: pointer;
 }
 
 .control__marker {
@@ -22,9 +23,9 @@
   grid-template-columns: 30px 1fr;
   column-gap: 16px;
   align-items: center;
+  cursor: pointer;
 
   @include font_size_text(16px, 18px);
-  grid-template-columns: 30px 1fr;
 
   &::before {
     grid-column: 1 / 2;
@@ -48,18 +49,27 @@
     border-radius: 50%;
   }
 
-  .control--radio .control__input:checked + &::after {
+  .control--radio .control__input:checked+&::after {
     background-color: $bg-color-secondary;
     border-radius: 50%;
   }
 
-  .control--checkbox .control__input:checked + &::after {
+  .control--checkbox .control__input:checked+&::after {
     width: 26px;
     height: 26px;
     background-image: url("../img/order/tick.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+  }
+
+  &:hover::before {
+    border-color: $bg-color-hover;
+  }
+
+  .control__input:focus+&::before {
+    outline: 2px solid $bg-color-focus;
+    outline-offset: -2px;
   }
 
   @media (min-width: $min-tablet) {
