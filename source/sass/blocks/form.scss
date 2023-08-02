@@ -41,7 +41,6 @@
 
   @media (min-width: $min-desktop) {
     flex-direction: row;
-    column-gap: 80px;
     margin-bottom: 67px;
   }
 
@@ -117,7 +116,9 @@
 
     @media (min-width: $min-desktop) {
       width: auto;
+      max-width: 570px;
       margin-bottom: 0;
+      margin-right: 80px;
       min-width: 569px;
     }
   }
@@ -162,6 +163,12 @@
 
   @media (min-width: $min-desktop) {
     margin-bottom: 13px;
+
+    &--icon:not(:last-child) {
+      min-width: 570px;
+      margin: 0;
+      margin-right: 78px;
+    }
   }
 }
 
