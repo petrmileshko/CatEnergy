@@ -15,6 +15,26 @@
   border: none;
   margin-bottom: 25px;
 
+  &:not(:first-child)::before {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    top: -48px;
+    right: calc(50% - 50vw);
+    background-color: $bg-color-secondary;
+    content: "";
+
+    @media (min-width: $min-tablet) {
+      width: 100vw;
+      top: -90px;
+    }
+
+    @media (min-width: $min-desktop) {
+      right: initial;
+      left: calc(50% - 50vw);
+    }
+  }
+
   @media (min-width: $min-tablet) {
     margin-bottom: 65px;
   }
@@ -27,6 +47,14 @@
 
   &--additional {
     color: $font-color-basic;
+
+    &:not(:first-child)::before {
+      top: -45px;
+
+      @media (min-width: $min-tablet) {
+        top: -70px;
+      }
+    }
 
     @media (min-width: $min-tablet) {
       display: grid;
@@ -43,6 +71,14 @@
 
   &--contacts {
     color: $font-color-footer;
+
+    &:not(:first-child)::before {
+      top: -70px;
+
+      @media (min-width: $min-tablet) {
+        top: -90px;
+      }
+    }
   }
 }
 
@@ -64,6 +100,7 @@
 
   @media (min-width: $min-tablet) {
     margin-bottom: 72px;
+
     &::after {
       content: none;
     }
@@ -171,11 +208,11 @@
   right: 15px;
   top: calc(50% - 12px);
 
-  .form__input:focus + & {
+  .form__input:focus+& {
     color: $button-bg-color;
   }
 
-  .form__input:not(:placeholder-shown):invalid + & {
+  .form__input:not(:placeholder-shown):invalid+& {
     color: $color-error;
   }
 
@@ -194,20 +231,10 @@
   span {
     position: relative;
     display: block;
-    max-width: 248px;
+    max-width: 201px;
     padding-right: 22px;
     background-color: $bg-color-primary;
     z-index: 1;
-  }
-
-  &::before {
-    position: absolute;
-    width: 80%;
-    height: 2px;
-    top: 15px;
-    right: calc(50% - 50vw);
-    background-color: $bg-color-secondary;
-    content: "";
   }
 
   @media (min-width: $min-tablet) {
@@ -224,21 +251,12 @@
       max-width: initial;
       padding: 0 37px 0 36px;
     }
-
-    &::before {
-      width: 100vw;
-      top: 20px;
-    }
   }
 
   @media (min-width: $min-desktop) {
     span {
       left: -40px;
       padding: 0 40px 0 35px;
-    }
-
-    &::before {
-      left: calc(50% - 50vw);
     }
   }
 }
