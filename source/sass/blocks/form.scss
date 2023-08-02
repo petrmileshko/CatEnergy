@@ -231,6 +231,7 @@
   span {
     position: relative;
     display: block;
+    width: max-content;
     max-width: 201px;
     padding-right: 22px;
     background-color: $bg-color-primary;
