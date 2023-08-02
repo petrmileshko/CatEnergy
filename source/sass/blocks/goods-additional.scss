@@ -43,6 +43,15 @@
 
   @include font_heading($font-regular);
   @include font_size_text(16px, 20px);
+
+  &:hover {
+    background-color: $button-bg-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 }
 
 .goods-additional__offer {

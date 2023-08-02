@@ -80,6 +80,14 @@
   margin-top: 22px;
   padding: 10px 0;
 
+  &:hover {
+    background-color: $button-bg-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $min-tablet) {
     grid-column: 1 / -1;
     grid-row: 4 / 5;

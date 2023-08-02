@@ -11,8 +11,19 @@
   flex-direction: column;
   width: 100%;
   padding: 0;
+  margin: 0;
   border: none;
   margin-bottom: 25px;
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $min-desktop) {
+    flex-direction: row;
+    column-gap: 80px;
+    margin-bottom: 67px;
+  }
 
   &--additional {
     color: $font-color-basic;
@@ -26,23 +37,37 @@
     @media (min-width: $min-desktop) {
       grid-template-columns: repeat(4, 1fr);
       margin-bottom: 61px;
+      column-gap: initial;
     }
   }
 
   &--contacts {
     color: $font-color-footer;
   }
-
-  @media (min-width: $min-desktop) {
-    flex-direction: row;
-    column-gap: 80px;
-  }
 }
 
 .form__subgroup {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
+
+  &::after {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    bottom: 0;
+    left: calc(50% - 50vw);
+    background-color: $bg-color-devider;
+    content: "";
+  }
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 72px;
+    &::after {
+      content: none;
+    }
+  }
 
   &--cat {
     padding-bottom: 24px;
@@ -50,26 +75,36 @@
 
     @media (min-width: $min-tablet) {
       width: 100%;
+      padding: 0;
     }
 
     @media (min-width: $min-desktop) {
       width: auto;
+      margin-bottom: 0;
       min-width: 569px;
     }
   }
 
   &--purpose {
-    padding-bottom: 20px;
+    padding: 22px 0 20px 0;
     color: $font-color-goods;
 
     @media (min-width: $min-tablet) {
       width: 100%;
+      padding: 25px 28px;
+      margin-bottom: 0;
       border: 1px solid $border-color-group;
+    }
+
+    @media (min-width: $min-desktop) {
+      padding: 0 0 0 28px;
+      justify-content: center;
     }
   }
 }
 
 .form__label {
+  position: relative;
   display: flex;
   width: 100%;
   margin-bottom: 14px;
@@ -100,10 +135,57 @@
   text-transform: inherit;
   color: inherit;
   border: 1px solid $border-color-group;
+
+  &:hover {
+    border-color: $bg-color-bar;
+  }
+
+  &:focus {
+    outline: 2px solid $button-color-catalog;
+    outline-offset: -2px;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    outline: 2px solid $color-error;
+    outline-offset: -2px;
+  }
+
+  &::placeholder {
+    opacity: 1;
+  }
+
+
+  .form__label--icon & {
+    padding-right: 42px;
+  }
+
+  @media (min-width: $min-tablet) {
+    .form__label--icon & {
+      padding-right: 50px;
+    }
+  }
+}
+
+.form__input-icon {
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 12px);
+
+  .form__input:focus + & {
+    color: $button-bg-color;
+  }
+
+  .form__input:not(:placeholder-shown):invalid + & {
+    color: $color-error;
+  }
+
+  @media (min-width: $min-tablet) {
+    right: 17px;
+  }
 }
 
 .form__group-legend {
-  margin-bottom: 34px;
+  margin-bottom: 35px;
 
   @include font_form_legend;
   text-transform: none;
@@ -137,10 +219,6 @@
       margin-bottom: 57px;
     }
 
-    br {
-      display: none;
-    }
-
     span {
       width: max-content;
       max-width: initial;
@@ -167,12 +245,28 @@
 
 .form__textarea {
   margin-top: 4px;
+  padding-left: 15px;
   font: inherit;
   text-transform: uppercase;
   color: $font-color-footer;
+  border: 1px solid $border-color-group;
+
+  &:hover {
+    border-color: $bg-color-bar;
+  }
+
+  &:focus {
+    outline: 2px solid $button-color-catalog;
+    outline-offset: -2px;
+  }
+
+  &::placeholder {
+    opacity: 1;
+  }
 
   @media (min-width: $min-desktop) {
     width: 100%;
+    padding: 0 19px;
   }
 }
 
@@ -181,14 +275,24 @@
   margin-bottom: 21px;
   padding: 14px 0;
 
+  &:hover {
+    background-color: $button-bg-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $min-tablet) {
     width: auto;
     margin-bottom: 0;
-    padding: 13px 45px;
+    padding: 14px 45px;
+
+    @include font_size_text(20px, normal);
   }
 
   @media (min-width: $min-desktop) {
-    padding: 13px 188px;
+    padding: 14px 188px;
   }
 }
 

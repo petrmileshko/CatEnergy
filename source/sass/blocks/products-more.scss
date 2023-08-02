@@ -89,8 +89,21 @@
   @include font_size_text(16px, 20px);
   color: $font-color-footer;
 
+  &:hover {
+    background-color: $bg-color-catalog;
+  }
+
+  &:active {
+    color: rgba($button-color-catalog, 0.3);
+    background-color: $bg-color-catalog;
+  }
+
   @media (min-width: $min-tablet) {
     width: auto;
     padding: 10px 79px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding: 10px 39px;
   }
 }
