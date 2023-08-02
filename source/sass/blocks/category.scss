@@ -170,6 +170,7 @@
   @media (min-width: $min-tablet) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    margin-right: auto;
 
     @include font_size_text(20px, 30px);
   }
