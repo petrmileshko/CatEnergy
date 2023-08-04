@@ -4,9 +4,15 @@
 
   @include bg_green;
   background-repeat: no-repeat;
-  background-position: 60% 0;
+  background-position: 50% 0;
   background-image: url("../img/backgrounds/hero-mobile.jpg"),
     linear-gradient($bg-color-secondary 0, $bg-color-secondary 302px, $bg-color-primary 302px);
+
+  @media (min-resolution: 2dppx) {
+    background-size: auto 302px, auto;
+    background-image: url("../img/backgrounds/hero-mobile@2x.jpg"),
+    linear-gradient($bg-color-secondary 0, $bg-color-secondary 302px, $bg-color-primary 302px);
+  }
 
   @media (min-width: $min-tablet) {
     @include bg_normal;
@@ -31,6 +37,11 @@
       background-repeat: no-repeat;
       background-position: 0 55px;
       background-image: url("../img/backgrounds/hero-descktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-size: auto 698px;
+        background-image: url("../img/backgrounds/hero-descktop@2x.jpg");
+      }
       content: "";
     }
   }
