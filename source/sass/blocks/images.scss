@@ -19,8 +19,8 @@
     overflow: hidden;
 
     img {
-      width: 594px;
-      height: 511px;
+      width: 611px;
+      height: auto;
       max-width: none;
     }
   }
@@ -32,6 +32,12 @@
   &--after {
     @media (min-width: $min-tablet) {
       justify-content: end;
+
+      img {
+        width: 545px;
+        height: auto;
+        max-width: none;
+      }
     }
   }
 }

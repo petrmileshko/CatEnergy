@@ -11,7 +11,7 @@
   @media (min-resolution: 2dppx) {
     background-size: auto 302px, auto;
     background-image: url("../img/backgrounds/hero-mobile@2x.jpg"),
-    linear-gradient($bg-color-secondary 0, $bg-color-secondary 302px, $bg-color-primary 302px);
+      linear-gradient($bg-color-secondary 0, $bg-color-secondary 302px, $bg-color-primary 302px);
   }
 
   @media (min-width: $min-tablet) {
@@ -30,7 +30,6 @@
       right: 0;
       bottom: 0;
       left: 50%;
-      max-height: 694px;
       z-index: -2;
 
       @include bg_green;
@@ -42,6 +41,7 @@
         background-size: auto 698px;
         background-image: url("../img/backgrounds/hero-descktop@2x.jpg");
       }
+
       content: "";
     }
   }
@@ -53,16 +53,17 @@
   align-items: center;
 
   @media (min-width: $min-tablet) {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content 58px 532px;
-    padding-left: 117px;
     background-color: transparent;
   }
 
   @media (min-width: $min-desktop) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 77px min-content 100px 111px;
+    grid-template-rows: 77px min-content min-content 111px;
+    min-height: 499px;
     padding-left: 80px;
   }
 }
@@ -75,7 +76,7 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     max-width: 415px;
-    margin: 0 0 41px 0;
+    margin: 0 0 41px 117px;
 
     @include font_size_text(60px, 60px);
   }
@@ -83,6 +84,7 @@
   @media (min-width: $min-desktop) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    margin: 0 0 41px 0;
   }
 }
 
@@ -96,7 +98,7 @@
   @media (min-width: $min-tablet) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px 117px;
 
     @include font_size_text(20px, 20px);
   }
@@ -104,8 +106,8 @@
   @media (min-width: $min-desktop) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    margin: 0;
-    margin-top: 0;
+    margin: 0 0 52px 0;
+    align-self: start;
   }
 }
 
@@ -113,15 +115,23 @@
   margin: 0 0 3px 0;
 
   @media (min-width: $min-tablet) {
-    grid-column: 1 / 2;
-    grid-row: 3 / 5;
-    align-self: self-start;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 709px;
+    height: 609px;
+    margin: 0;
+    z-index: -1;
   }
 
   @media (min-width: $min-desktop) {
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
+    position: absolute;
+    top: -20px;
+    bottom: initial;
+    left: calc(50% - 162px);
     z-index: 1;
+    width: 552px;
+    height: 499px;
   }
 }
 
@@ -137,6 +147,7 @@
     justify-self: start;
     width: auto;
     padding: 10px 26px;
+    margin-left: 117px;
 
     @include font_size_text(20px, 20px);
   }
@@ -146,7 +157,7 @@
     grid-row: 4 / 5;
     justify-self: start;
     align-self: start;
-    margin-top: 12px;
+    margin: 12px 0 0 0;
   }
 
   &:hover {

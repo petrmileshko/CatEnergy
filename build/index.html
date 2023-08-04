@@ -48,8 +48,13 @@
       <div class="hero__wrapper block-center">
         <h1 class="hero__title title">Функциональное питание для котов</h1>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
-        <img class="hero__image" src="img/index/mobile/can-pro.png" width="280" height="270"
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/index/descktop/can-pro.png 1x, img/index/descktop/can-pro@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index/tablet/can-pro.jpg 1x, img/index/tablet/can-pro@2x.jpg 2x">
+          <img class="hero__image" src="img/index/mobile/can-pro.png" srcset="img/index/mobile/can-pro@2x.png 2x" width="280" height="270"
           alt="Корм с курицей PRO 500 грамм.">
+        </picture>
+
         <a class="hero__action button" href="feeding-form.html">подобрать программу</a>
       </div>
     </header>
@@ -118,12 +123,18 @@
 
         <div class="example__compare images">
           <div class="images__item images__item--before images__item--active">
-            <img src="img/index/mobile/cat-before.png" width="280" height="232"
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/index/tablet/cat-before.png 1x, img/index/tablet/cat-before@2x.png 2x">
+              <img src="img/index/mobile/cat-before.png" width="280" height="232" srcset="img/index/mobile/cat-before@2x.png 2x"
               alt="Толстый и ленивый кот на обычном питании.">
+            </picture>
           </div>
           <div class="images__item images__item--after">
-            <img src="img/index/mobile/cat-after.png" width="243" height="232"
-              alt="Стройный и активный кот на нашем функциональном питании  ">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/index/tablet/cat-after.png 1x, img/index/tablet/cat-after@2x.png 2x">
+              <img src="img/index/mobile/cat-after.png" width="243" height="232" srcset="img/index/mobile/cat-after@2x.png 2x"
+              alt="Стройный и активный кот на нашем функциональном питании.">
+            </picture>
           </div>
         </div>
 
