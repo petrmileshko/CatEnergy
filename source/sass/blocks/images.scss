@@ -31,7 +31,7 @@
 
   &--after {
     @media (min-width: $min-tablet) {
-      justify-content: end;
+      justify-content: flex-end;
 
       img {
         width: 545px;
