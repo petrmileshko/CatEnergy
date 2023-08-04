@@ -17,8 +17,12 @@
     <nav class="page-header__nav navigation block-center--nojs">
       <div class="page-header__bar block-center">
         <span class="page-header__logo logo">
-          <img class="logo__img" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Корм для котов">
-          <img class="logo__title" src="img/logo-sign-mobile.svg" width="101" height="18" alt="" aria-hidden="true">
+          <picture>
+            <source media="(min-width: 1220px)" srcset="img/logo-descktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__img" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Корм для котов">
+          </picture>
+          <img class="logo__title" src="img/logo-sign.svg" width="101" height="19" alt="" aria-hidden="true">
         </span>
         <button class="navigation__toggler navigation__toggler--nojs" type="button">
           <span class="visually-hidden">Открыть</span>

@@ -11,8 +11,35 @@
   &:active {
     opacity: 0.6;
   }
+
+  @media (min-width: $min-tablet) {
+    grid-template-columns: 61px 1fr;
+  }
+
+  @media (min-width: $min-desktop) {
+    grid-template-columns: 71px 1fr;
+  }
+}
+
+.logo__img {
+  @media (min-width: $min-tablet) {
+    width: 61px;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 71px;
+  }
 }
 
 .logo__title {
+  width: 101px;
   justify-self: center;
+
+  @media (min-width: $min-tablet) {
+    width: 102px;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 118px;
+  }
 }
