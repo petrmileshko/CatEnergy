@@ -3,7 +3,21 @@
   padding: 0;
   list-style-type: none;
 
+  @media (min-width: $min-tablet) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: end;
+    min-width: 440px;
+    max-width: 550px;
+  }
+
   @media (min-width: $min-desktop) {
+    min-width: 470px;
+    max-width: 600px;
+
     &--main {
       color: $font-color-inverted;
     }

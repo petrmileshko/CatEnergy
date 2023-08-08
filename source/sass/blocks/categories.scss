@@ -11,8 +11,12 @@
   }
 
   @media (min-width: $min-desktop) {
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 71px;
+  }
+
+  @media (min-width: 1350px) {
+    justify-content: space-between;
   }
 }
 

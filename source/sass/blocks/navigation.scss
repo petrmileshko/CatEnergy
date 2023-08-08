@@ -59,17 +59,4 @@
     background-color: $bg-color-primary;
     z-index: 1;
   }
-
-  @media (min-width: $min-tablet) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    justify-self: end;
-    min-width: 440px;
-  }
-
-  @media (min-width: $min-desktop) {
-    min-width: 470px;
-  }
 }
