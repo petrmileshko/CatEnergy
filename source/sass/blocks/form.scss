@@ -286,6 +286,10 @@
     outline-offset: -2px;
   }
 
+  &:disabled {
+    opacity: 0.3;
+  }
+
   &::placeholder {
     opacity: 1;
   }

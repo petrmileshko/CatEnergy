@@ -72,6 +72,14 @@
     outline-offset: -2px;
   }
 
+  .control__input:disabled + & {
+    opacity: 0.3;
+  }
+
+  .control__input:disabled + &::before {
+    border-color: $bg-color-hover;
+  }
+
   @media (min-width: $min-tablet) {
     @include font_size_text(20px, 30px);
   }
