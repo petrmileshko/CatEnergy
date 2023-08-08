@@ -11,7 +11,6 @@
   }
 
   @media (min-width: $min-desktop) {
-    flex-wrap: nowrap;
     justify-content: space-between;
     margin-bottom: 71px;
   }
@@ -22,9 +21,9 @@
 
   @media (min-width: $min-desktop) {
     max-width: 570px;
-    margin: 0;
+    margin: 0 0 20px 0;
 
-    &:not(:last-of-type) {
+    &:not(:nth-of-type(2n)) {
       margin-right: 10px;
     }
   }
