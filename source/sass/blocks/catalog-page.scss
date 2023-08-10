@@ -62,8 +62,8 @@
     @include font_size_text(36px, 36px);
 
     span {
-      width: max-content;
-      max-width: initial;
+      width: initial;
+      max-width: 600px;
       padding: 0 37px 0 36px;
     }
 

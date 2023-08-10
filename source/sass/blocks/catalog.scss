@@ -7,12 +7,15 @@
   @media (min-width: $min-tablet) {
     display: grid;
     grid-template-columns: repeat(2, 324px);
-    grid-auto-rows: 511px;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
     gap: 60px;
   }
 
   @media (min-width: $min-desktop) {
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
     column-gap: 5vw;
     row-gap: 63px;
   }

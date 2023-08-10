@@ -23,6 +23,7 @@
     display: grid;
     grid-template-columns: repeat(2, 250px);
     grid-template-rows: max-content;
+    grid-auto-rows: auto;
     column-gap: 137px;
     row-gap: 37px;
   }
@@ -36,6 +37,7 @@
 
   @media (min-width: 1344px) {
     grid-template-columns: repeat(4, 326px);
+    grid-template-rows: auto;
     justify-content: initial;
   }
 }

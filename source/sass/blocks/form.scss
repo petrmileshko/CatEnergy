@@ -159,7 +159,6 @@
   text-transform: uppercase;
 
   span {
-    width: max-content;
     margin: auto 12px auto 0;
   }
 
@@ -260,7 +259,6 @@
   span {
     position: relative;
     display: block;
-    width: max-content;
     max-width: 201px;
     padding-right: 22px;
     background-color: $bg-color-primary;
@@ -277,8 +275,7 @@
     }
 
     span {
-      width: max-content;
-      max-width: initial;
+      max-width: 600px;
       padding: 0 37px 0 36px;
     }
   }
