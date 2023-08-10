@@ -78,6 +78,16 @@
         top: -90px;
       }
     }
+
+    @media (min-width: $min-desktop) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--comments {
+    @media (min-width: $min-desktop) {
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -165,11 +175,23 @@
     margin-bottom: 13px;
 
     &--icon:not(:last-child) {
+      flex: 0;
       min-width: 570px;
       margin: 0;
       margin-right: 78px;
     }
+
+    &--icon:last-child {
+      width: 570px;
+      min-width: min-content;
+    }
+
+    &--icon:nth-of-type(2n) {
+      width: 570px;
+      margin: 0;
+    }
   }
+
 }
 
 .form__input {
