@@ -1,4 +1,4 @@
-// Подключаем библиотеки
+//                   Подключаем библиотеки
 // Они должны быть указаны в dev зависимостях файла package.json и установлены командой npm i
 
 const gulp = require('gulp'); // сборщик
@@ -9,7 +9,38 @@ const postcss = require('gulp-postcss'); // обработчик файла ст
 const autoprefix = require('autoprefixer'); // автоматическая подстановка префиксов для поддержки разных браузеров
 const sync = require('browser-sync').create();
 
-//Задачи
+
+//                     Задачи
+
+// Запуск сервера
+const server = (done) => {
+  sync.init({
+    server: {
+      baseDir: "build"    // папка из которой сервер берет источники для страницы
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+
+exports.server = server;
+
+// Перезагрузка
+
+const reload = (done) => {
+  sync.reload();              // перезагрузка в случае если произошли изменения в исходных файлах
+  done();
+}
+
+// Отслеживание изменений в исходных файлах
+
+const watcher = () => {
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles)); // отслеживать файлы препроцессора
+  gulp.watch("source/js/**/*.js", gulp.series(scripts));  // отслеживать файлы скриптов
+  gulp.watch("source/*.html", gulp.series(html, reload)); // отслеживать файлы разметки HTML
+}
 
 //Генерация стилей из препроцессора
 
@@ -25,3 +56,5 @@ const styles = () => {
   ))
   .pipe(gulp.dest('build/css'))
 }
+
+exports.styles = styles;
