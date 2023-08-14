@@ -64,17 +64,23 @@
 
   border: none;
 
+
   @media (min-width: $min-tablet) {
     height: 400px;
   }
 
   @media (min-width: $min-desktop) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    //bottom: 0;
+    //right: 0;
   }
+}
+
+.contacts__map-wrapper {
+  width: 100%;
+  max-width: 100%;
 }
 
 .contacts__location {
