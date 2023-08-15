@@ -51,8 +51,7 @@ export const styles = () => {
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest('build/css'))
-    .pipe(gulp.dest('source/css'));
-  // .pipe(browser.stream());
+    .pipe(browser.stream());
 };
 
 // CleanCSS
@@ -120,8 +119,7 @@ export const minjs = () => {
       path.extname = '.min.js';
     }
     ))
-    .pipe(gulp.dest('build/js'))
-    .pipe(gulp.dest('source/js'));
+    .pipe(gulp.dest('build/js'));
 };
 
 // Optimize images
@@ -192,6 +190,7 @@ export const clean = () => {
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch("source/js/app.js", gulp.series(minjs));
   gulp.watch('build/*.html').on('change', browser.reload);
 };
 
@@ -200,17 +199,18 @@ const watcher = () => {
 
 const watcherDev = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  // gulp.watch('source/js/**/!(*.min).js', gulp.series(minjs));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 };
 
 
 // My Develop Mode
 
 export const dev = gulp.series(
-  styles,
+  styles
   // mincss, //gulp минификатор
   // minjs,
-  watcherDev);
+  //watcherDev
+  );
 
 // Build project
 
@@ -239,6 +239,7 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
+  createWebp,
   gulp.parallel(
     styles
     // minhtml,
@@ -246,6 +247,6 @@ export default gulp.series(
     // createWebp
   ),
   gulp.series(
-    server
-    // watcher
+    server,
+    watcher
   ));

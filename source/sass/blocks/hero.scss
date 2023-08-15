@@ -139,6 +139,7 @@
   width: 100%;
   padding: 10px 0;
   color: #000000;
+
   @include font_size_text(14px, 18px);
 
   @media (min-width: $min-tablet) {
