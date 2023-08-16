@@ -4,7 +4,7 @@
 const gulp = require('gulp'); // сборщик
 const plumber = require('gulp-plumber'); // обработчик ошибок в файлах препроцессора
 const sourcemap = require('gulp-sourcemaps'); // создание карты стилей
-const sass = require('gulp-sass'); // препроцессор SCSS
+const sass = require('gulp-sass')(require('sass')); // препроцессор SCSS
 const postcss = require('gulp-postcss'); // обработчик файла стилей
 const autoprefix = require('autoprefixer'); // автоматическая подстановка префиксов для поддержки разных браузеров
 const sync = require('browser-sync').create();
