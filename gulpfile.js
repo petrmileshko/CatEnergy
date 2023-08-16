@@ -49,30 +49,29 @@ const styles = () => {
   .pipe(plumber()) // подключаем обработчик ошибок
   .pipe(sourcemap.init()) // Фиксация исходного состояния кода в файлах препроцессора
   .pipe(sass()) // запускаем препроцессор чтобы получить файл стилей
-  .pipe(postcss(  //запускаем дополнительные плагины для обработки стилей
+  .pipe(postcss(
     [
-      autoprefix(sourcemap.write('.'))  // Создание карты стилей
+      autoprefix(sourcemap.write('.'))
     ]
   ))
   .pipe(gulp.dest('build/css'))
 }
 
 exports.styles = styles;
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sass = require("gulp-sass");
 
-/**
- *    Задачи
- */
+// Запуск задач
+const build = gulp.series(
+      styles
+    );
+exports.build = build;
 
-// Препроцессор - обработка файлов scss
+// Запуск по умолчанию
 
-const style = ()=> {
-  return gulp.src("source/sass/style.scss") // указываем путь откуда брать основной файл сборки
-  .pipe(plumber())                          // запуск отладчика ошибок
-  .pipe(sass().on('error',sass.logError))   // запуск препроцессора
-  .pipe(gulp.dest("build/css"))             // сохраняем результат в указанную папку
-}
-
-exports.style = style;
+exports.default = gulp.series(
+  gulp.parallel(
+    styles
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
