@@ -38,9 +38,11 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles)); // отслеживать файлы препроцессора
-  gulp.watch("source/js/**/*.js", gulp.series(scripts));  // отслеживать файлы скриптов
-  gulp.watch("source/*.html", gulp.series(html, reload)); // отслеживать файлы разметки HTML
+  //gulp.watch("source/js/**/*.js", gulp.series(scripts));  // отслеживать файлы скриптов
+ // gulp.watch("source/*.html", gulp.series(html, reload)); // отслеживать файлы разметки HTML
 }
+
+exports.watcher = watcher;
 
 //Генерация стилей из препроцессора
 
