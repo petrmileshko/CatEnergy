@@ -6,11 +6,15 @@ const plumber = require('gulp-plumber'); // обработчик ошибок в
 const sourcemap = require('gulp-sourcemaps'); // создание карты стилей
 const sass = require('gulp-sass')(require('sass')); // препроцессор SCSS
 const postcss = require('gulp-postcss'); // обработчик файла стилей
+const rename = require("gulp-rename"); // переименование файла
 const autoprefix = require('autoprefixer'); // автоматическая подстановка префиксов для поддержки разных браузеров
 const sync = require('browser-sync').create();
 
 
-//                     Задачи
+/**
+ * Задачи
+ *
+ */
 
 // Запуск сервера
 const server = (done) => {
@@ -53,21 +57,28 @@ const styles = () => {
   .pipe(sass()) // запускаем препроцессор чтобы получить файл стилей
   .pipe(postcss(
     [
-      autoprefix(sourcemap.write('.'))
+      autoprefix()
     ]
   ))
+  .pipe(rename("style.min.css"))
+  .pipe(sourcemap.write("."))
   .pipe(gulp.dest('build/css'))
 }
 
 exports.styles = styles;
 
-// Запуск задач
+
+/**
+ *  Запуск задач
+ */
+
+// Запуск для сборки конечного продукта
 const build = gulp.series(
       styles
     );
 exports.build = build;
 
-// Запуск по умолчанию
+// Запуск по умолчанию - сборка в режиме разработчика
 
 exports.default = gulp.series(
   gulp.parallel(
