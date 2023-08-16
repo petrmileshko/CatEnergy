@@ -58,3 +58,21 @@ const styles = () => {
 }
 
 exports.styles = styles;
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const sass = require("gulp-sass");
+
+/**
+ *    Задачи
+ */
+
+// Препроцессор - обработка файлов scss
+
+const style = ()=> {
+  return gulp.src("source/sass/style.scss") // указываем путь откуда брать основной файл сборки
+  .pipe(plumber())                          // запуск отладчика ошибок
+  .pipe(sass().on('error',sass.logError))   // запуск препроцессора
+  .pipe(gulp.dest("build/css"))             // сохраняем результат в указанную папку
+}
+
+exports.style = style;
