@@ -190,6 +190,7 @@
       margin: 0;
     }
   }
+
 }
 
 .form__input {
@@ -235,11 +236,11 @@
   right: 15px;
   top: calc(50% - 12px);
 
-  .form__input:focus + & {
+  .form__input:focus+& {
     color: $button-bg-color;
   }
 
-  .form__input:not(:placeholder-shown):invalid + & {
+  .form__input:not(:placeholder-shown):invalid+& {
     color: $color-error;
   }
 
