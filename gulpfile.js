@@ -39,7 +39,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles)); // отслеживать файлы препроцессора
   gulp.watch("source/js/**/*.js", gulp.series(scriptsjs));  // отслеживать файлы скриптов
- // gulp.watch("source/*.html", gulp.series(copy, reload)); // отслеживать файлы разметки HTML
+  gulp.watch("source/*.html", gulp.series(copy, reload)); // отслеживать файлы разметки HTML
 }
 exports.watcher = watcher;
 
