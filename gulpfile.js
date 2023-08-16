@@ -7,6 +7,7 @@ const sourcemap = require('gulp-sourcemaps'); // создание карты с�
 const sass = require('gulp-sass')(require('sass')); // препроцессор SCSS
 const postcss = require('gulp-postcss'); // обработчик файла стилей
 const rename = require("gulp-rename"); // переименование файла
+const csso = require("postcss-csso"); // минификация файла стилей
 const autoprefix = require('autoprefixer'); // автоматическая подстановка префиксов для поддержки разных браузеров
 const sync = require('browser-sync').create();
 
@@ -31,7 +32,7 @@ const server = (done) => {
 
 exports.server = server;
 
-// Перезагрузка
+// Перезагрузка в случае изменений в файлах
 
 const reload = (done) => {
   sync.reload();              // перезагрузка в случае если произошли изменения в исходных файлах
@@ -57,7 +58,8 @@ const styles = () => {
   .pipe(sass()) // запускаем препроцессор чтобы получить файл стилей
   .pipe(postcss(
     [
-      autoprefix()
+      autoprefix(),
+      csso()
     ]
   ))
   .pipe(rename("style.min.css"))
