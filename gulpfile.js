@@ -9,6 +9,7 @@ const postcss = require('gulp-postcss'); // обработчик файла ст
 const rename = require("gulp-rename"); // переименование файла
 const csso = require("postcss-csso"); // минификация файла стилей
 const terser = require("gulp-terser"); // обработка Js файлов
+const htmlmin = require("gulp-htmlmin"); // минификация html
 const autoprefix = require('autoprefixer'); // автоматическая подстановка префиксов для поддержки разных браузеров
 const squoosh = require("gulp-libsquoosh"); // Оптимизация картинок
 const webp = require("gulp-webp"); // Конвертер изображений в формат webp
@@ -41,7 +42,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles)); // отслеживать файлы препроцессора
   gulp.watch("source/js/**/*.js", gulp.series(scriptsjs)); // отслеживать файлы скриптов
-  gulp.watch("source/*.html", gulp.series(copy, reload)); // отслеживать файлы разметки HTML
+  gulp.watch("source/*.html", gulp.series(html, reload)); // отслеживать файлы разметки HTML
 }
 exports.watcher = watcher;
 
@@ -80,6 +81,14 @@ const scriptsjs = () => {
     .pipe(sync.stream());
 }
 exports.scriptsjs = scriptsjs;
+
+// минификация html
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+}
+exports.html = html;
 
 // Удаление старой версии сборки перед записью новой
 const cleanbuild = () => {
@@ -161,6 +170,7 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     scriptsjs,
+    html,
     sprite,
     createWebp
   ));
@@ -174,6 +184,7 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     scriptsjs,
+    html,
     sprite,
     createWebp
   ),
