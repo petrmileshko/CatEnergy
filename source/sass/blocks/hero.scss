@@ -5,12 +5,12 @@
   @include bg_green;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-image: url("../img/backgrounds/hero-mobile.jpg"),
+  background-image: url("../img/backgrounds/hero-mobile.webp"),
     linear-gradient($bg-color-hero 0, $bg-color-hero 302px, $bg-color-primary 302px);
 
   @media (min-resolution: 2dppx) {
     background-size: auto 302px, auto;
-    background-image: url("../img/backgrounds/hero-mobile@2x.jpg"),
+    background-image: url("../img/backgrounds/hero-mobile@2x.webp"),
       linear-gradient($bg-color-hero 0, $bg-color-hero 302px, $bg-color-primary 302px);
   }
 
@@ -35,11 +35,11 @@
       @include bg_green;
       background-repeat: no-repeat;
       background-position: 0 55px;
-      background-image: url("../img/backgrounds/hero-descktop.jpg");
+      background-image: url("../img/backgrounds/hero-descktop.webp");
 
       @media (min-resolution: 2dppx) {
         background-size: auto 698px;
-        background-image: url("../img/backgrounds/hero-descktop@2x.jpg");
+        background-image: url("../img/backgrounds/hero-descktop@2x.webp");
       }
 
       content: "";

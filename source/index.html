@@ -6,6 +6,7 @@
   <meta name="description" content="Онлайн-магазин корм для котов.">
   <meta name="author" content="Mileshko Peter">
   <meta name="copyright" content="https://htmlacademy.ru/">
+  <base href="https://portfolio.webpeternet.ru/cat/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
@@ -14,6 +15,8 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="img/index/mobile/can-pro.webp" as="image" type="image/webp" crossorigin>
+  <link rel="preload" href="img/backgrounds/hero-mobile.webp" as="image" type="image/webp" crossorigin>
   <title>Магазин корма для котов</title>
 </head>
 
@@ -170,8 +173,7 @@
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
     </div>
-    <iframe class="contacts__map"
-      src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad224644410c55b2ed14431db75f96f5f9b20f7bae6f613c488ede772f53925b8&amp;source=constructor"></iframe>
+    <iframe class="contacts__map lazyload" title="Местоположение офиса на карте" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad224644410c55b2ed14431db75f96f5f9b20f7bae6f613c488ede772f53925b8&amp;source=constructor"></iframe>
   </footer>
 
   <footer class="page__footer">
@@ -210,6 +212,7 @@
       </a>
     </div>
   </footer>
-  <script src="js/app.min.js"></script>
+  <script src="js/lazysizes.min.js" async></script>
+  <script src="js/app.min.js" async></script>
 </body>
 </html>
