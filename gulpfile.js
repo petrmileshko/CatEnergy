@@ -160,6 +160,20 @@ const sprite = () => {
 }
 exports.sprite = sprite;
 
+const critcss =  (done) => {
+  critical.generate({
+      inline: true,
+      base: 'build/',
+      src: 'index.html',
+      dest: 'build/index-critical.html',
+      minify: true,
+      width: 320,
+      height: 480
+  });
+  done();
+}
+exports.critcss = critcss;
+
 /**
  *  Запуск задач
  */
@@ -171,10 +185,10 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     scriptsjs,
-    html,
+    //html,
     sprite,
     createWebp
-  ));
+  ),  critcss);
 exports.build = build;
 
 // Запуск по умолчанию - сборка в режиме разработчика (npm start)
