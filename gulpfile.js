@@ -18,6 +18,7 @@ const svgmin = require('gulp-svgmin');     // Сжимание файлов svg
 const path = require('path');
 const del = require("del"); // удаление папки
 const sync = require('browser-sync').create();
+const critical = require('critical');
 
 
 /**
