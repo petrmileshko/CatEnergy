@@ -165,11 +165,20 @@ const critcss =  (done) => {
       inline: true,
       base: 'build/',
       src: 'index.html',
-      dest: 'build/index-critical.html',
+      dest: 'index.html',
       minify: true,
       width: 320,
       height: 480
   });
+  critical.generate({
+    inline: true,
+    base: 'build/',
+    src: 'catalog.html',
+    dest: 'catalog.html',
+    minify: true,
+    width: 320,
+    height: 480
+});
   done();
 }
 exports.critcss = critcss;
@@ -185,7 +194,7 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     scriptsjs,
-    //html,
+    html,
     sprite,
     createWebp
   ),  critcss);
