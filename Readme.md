@@ -12,10 +12,10 @@
 * Изображения страниц:
 
 Главная страница
-![image](https://files.webpeternet.ru/cat-index.jpg)
+![image](https://files.webpetr.ru/cat-index.jpg)
 
 Страница каталога
-![image](https://files.webpeternet.ru/cat-catalog.jpg)
+![image](https://files.webpetr.ru/cat-catalog.jpg)
 
 Страница формы
-![image](https://files.webpeternet.ru/cat-form.jpg)
+![image](https://files.webpetr.ru/cat-form.jpg)
